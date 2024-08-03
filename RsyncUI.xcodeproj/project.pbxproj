@@ -1,0 +1,1639 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E801DC662637FD990060723F /* WriteConfigurationJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E801DC652637FD990060723F /* WriteConfigurationJSON.swift */; };
+		E8518C7A263807F200128796 /* WriteLogRecordsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8518C79263807F200128796 /* WriteLogRecordsJSON.swift */; };
+		E8902993260B0EF700F4F0DC /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8902992260B0EF700F4F0DC /* ButtonStyles.swift */; };
+		E8944892267B2CB0009F9C4A /* RsyncUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8944891267B2CB0009F9C4A /* RsyncUIView.swift */; };
+		E902346B2C4F7AA100595967 /* ReadImportConfigurationsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902346A2C4F7AA100595967 /* ReadImportConfigurationsJSON.swift */; };
+		E902C10F27B836CC00A75D7A /* WriteUserConfigurationJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902C10E27B836CC00A75D7A /* WriteUserConfigurationJSON.swift */; };
+		E905DFCB2B00CECD00FEFF3A /* AlltasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905DFCA2B00CECD00FEFF3A /* AlltasksView.swift */; };
+		E9104F7D2C18AA0E00776625 /* SSHpath.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9104F7C2C18AA0E00776625 /* SSHpath.swift */; };
+		E91FDCA12A5173860087B4CE /* Argumentsforrsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FDCA02A5173860087B4CE /* Argumentsforrsync.swift */; };
+		E927447529407F8C009DAC1C /* CheckfornewversionofRsyncUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E927447429407F8C009DAC1C /* CheckfornewversionofRsyncUI.swift */; };
+		E931ED962B0C82BB000BEF56 /* QuicktaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E931ED952B0C82BB000BEF56 /* QuicktaskView.swift */; };
+		E9359B9A26691EFD00D40C43 /* ObservableAddConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9359B9926691EFD00D40C43 /* ObservableAddConfigurations.swift */; };
+		E93878C32B27355A009574CD /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93878C22B27355A009574CD /* AddTaskView.swift */; };
+		E93CC3FF2A68218200DB02EB /* ListofTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93CC3FE2A68218200DB02EB /* ListofTasksView.swift */; };
+		E93CC5732C4D4974000F8963 /* ImportExportCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93CC5722C4D4974000F8963 /* ImportExportCommands.swift */; };
+		E93D3B182AFA541D0056DC55 /* LogsbyConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93D3B172AFA541D0056DC55 /* LogsbyConfigurationView.swift */; };
+		E93D7B7D26CD920D00E290A1 /* ObservableParametersDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93D7B7C26CD920D00E290A1 /* ObservableParametersDefault.swift */; };
+		E943B0A925FFC22200A4F30D /* RsyncProcessFilehandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E943B0A825FFC22200A4F30D /* RsyncProcessFilehandler.swift */; };
+		E9493E4B2BF4DB1000512A8A /* DetailsOneTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9493E4A2BF4DB1000512A8A /* DetailsOneTaskView.swift */; };
+		E9493E4D2BF4DB8B00512A8A /* ObservableOutputfromrsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9493E4C2BF4DB8B00512A8A /* ObservableOutputfromrsync.swift */; };
+		E94E1E1C2A2DAA3E00011FED /* RestoreFilesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E1E1B2A2DAA3E00011FED /* RestoreFilesTableView.swift */; };
+		E954AD3F2AFE8F3800F3EA63 /* SidebarTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954AD3E2AFE8F3800F3EA63 /* SidebarTasksView.swift */; };
+		E954AD412AFE8FBB00F3EA63 /* DetailsSummarizedTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954AD402AFE8FBB00F3EA63 /* DetailsSummarizedTasksView.swift */; };
+		E954AD432AFE901200F3EA63 /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954AD422AFE901200F3EA63 /* TasksView.swift */; };
+		E9569EA927B809EE0038799C /* ReadUserConfigurationJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9569EA827B809EE0038799C /* ReadUserConfigurationJSON.swift */; };
+		E9569EAB27B80BEB0038799C /* UserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9569EAA27B80BEB0038799C /* UserConfiguration.swift */; };
+		E9569EAD27B80C220038799C /* DecodeUserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9569EAC27B80C220038799C /* DecodeUserConfiguration.swift */; };
+		E956D3782B0C88B9008B190F /* RestoreTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956D3772B0C88B9008B190F /* RestoreTableView.swift */; };
+		E95BD4632C29A9AA00E1C175 /* Homepath.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BD4622C29A9AA00E1C175 /* Homepath.swift */; };
+		E95DD7F428EC738B007654BC /* RsyncProcessNOFilehandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95DD7F328EC738B007654BC /* RsyncProcessNOFilehandler.swift */; };
+		E95EDC7F26063CAA000018DE /* EditRsyncParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95EDC7E26063CAA000018DE /* EditRsyncParameter.swift */; };
+		E95EDC8A26063EAA000018DE /* ObservableParametersRsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95EDC8926063EAA000018DE /* ObservableParametersRsync.swift */; };
+		E96036042B288CB600438D8B /* SidebarMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96036032B288CB600438D8B /* SidebarMainView.swift */; };
+		E961D0512BEC8CE300CBF9B1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E961D0502BEC8CE300CBF9B1 /* ProfileView.swift */; };
+		E96223952B0BDA7E00C40578 /* OutputRsyncView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96223942B0BDA7E00C40578 /* OutputRsyncView.swift */; };
+		E965D9B827E1C2E8005EFDBB /* UpdateLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E965D9B727E1C2E7005EFDBB /* UpdateLogs.swift */; };
+		E969669E2B49AEA90054E6C6 /* ExecuteAsyncNoEstimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E969669D2B49AEA90054E6C6 /* ExecuteAsyncNoEstimation.swift */; };
+		E96A165E272E735F00B95D3D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E96A165C272E735F00B95D3D /* Localizable.strings */; };
+		E96AA40D2A9923F40031B1C3 /* ListofTasksAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96AA40C2A9923F40031B1C3 /* ListofTasksAddView.swift */; };
+		E9712FBC2602465D003842FD /* DeleteLogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9712FBB2602465D003842FD /* DeleteLogsView.swift */; };
+		E9826ECC2C5EBEB10085E9AD /* RsyncParameters8to14.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9826EC72C5EBEB10085E9AD /* RsyncParameters8to14.swift */; };
+		E9826ECE2C5EBEB10085E9AD /* RsyncParameters1to6.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9826EC62C5EBEB10085E9AD /* RsyncParameters1to6.swift */; };
+		E9826ECF2C5EBEB10085E9AD /* RsyncParametersLinkdestarguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9826EC92C5EBEB10085E9AD /* RsyncParametersLinkdestarguments.swift */; };
+		E9826ED02C5EBEB10085E9AD /* RsyncParametersCompute.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9826EC82C5EBEB10085E9AD /* RsyncParametersCompute.swift */; };
+		E9826ED12C5EBEB10085E9AD /* DefaultRsyncParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9826EC52C5EBEB10085E9AD /* DefaultRsyncParameters.swift */; };
+		E985C5C725F3AC0700CB895C /* RsyncUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C5C625F3AC0700CB895C /* RsyncUIApp.swift */; };
+		E985C5CE25F3AC0800CB895C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E985C5CD25F3AC0800CB895C /* Preview Assets.xcassets */; };
+		E985C65825F3AD8400CB895C /* SidebarSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C60F25F3AD8400CB895C /* SidebarSettingsView.swift */; };
+		E985C65D25F3AD8400CB895C /* Profilenames.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C61425F3AD8400CB895C /* Profilenames.swift */; };
+		E985C66225F3AD8400CB895C /* Sshsettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C61B25F3AD8400CB895C /* Sshsettings.swift */; };
+		E985C66325F3AD8400CB895C /* RsyncandPathsettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C61C25F3AD8400CB895C /* RsyncandPathsettings.swift */; };
+		E985C66425F3AD8400CB895C /* Environmentsettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C61D25F3AD8400CB895C /* Environmentsettings.swift */; };
+		E985C66725F3AD8400CB895C /* Viewmodifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C62225F3AD8400CB895C /* Viewmodifiers.swift */; };
+		E985C66B25F3AD8400CB895C /* SnapshotListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C62825F3AD8400CB895C /* SnapshotListView.swift */; };
+		E985C66C25F3AD8400CB895C /* SnapshotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C62925F3AD8400CB895C /* SnapshotsView.swift */; };
+		E985C67A25F3AD8400CB895C /* RsyncCommandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C63925F3AD8400CB895C /* RsyncCommandView.swift */; };
+		E985C67B25F3AD8400CB895C /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C63B25F3AD8400CB895C /* AboutView.swift */; };
+		E985C68725F3AD8400CB895C /* EditValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C64A25F3AD8400CB895C /* EditValue.swift */; };
+		E985C72725F3AD9700CB895C /* CatalogForProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C69625F3AD9600CB895C /* CatalogForProfile.swift */; };
+		E985C72925F3AD9700CB895C /* Keypathidentityfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C69825F3AD9600CB895C /* Keypathidentityfile.swift */; };
+		E985C72B25F3AD9700CB895C /* TagSnapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C69B25F3AD9600CB895C /* TagSnapshots.swift */; };
+		E985C72C25F3AD9700CB895C /* SnapshotData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C69C25F3AD9600CB895C /* SnapshotData.swift */; };
+		E985C72D25F3AD9700CB895C /* Snapshotlogsandcatalogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C69D25F3AD9600CB895C /* Snapshotlogsandcatalogs.swift */; };
+		E985C72E25F3AD9700CB895C /* OutputfromProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6A025F3AD9600CB895C /* OutputfromProcess.swift */; };
+		E985C73225F3AD9700CB895C /* GetfullpathforRsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6A525F3AD9600CB895C /* GetfullpathforRsync.swift */; };
+		E985C73325F3AD9700CB895C /* MyEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6A625F3AD9600CB895C /* MyEnvironment.swift */; };
+		E985C73425F3AD9700CB895C /* RsyncCommandtoDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6A725F3AD9600CB895C /* RsyncCommandtoDisplay.swift */; };
+		E985C73525F3AD9700CB895C /* Backupconfigfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6A825F3AD9600CB895C /* Backupconfigfiles.swift */; };
+		E985C73625F3AD9700CB895C /* SetandValidatepathforrsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6A925F3AD9600CB895C /* SetandValidatepathforrsync.swift */; };
+		E985C73725F3AD9700CB895C /* extensionDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6AA25F3AD9600CB895C /* extensionDate.swift */; };
+		E985C73B25F3AD9700CB895C /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = E985C6AF25F3AD9600CB895C /* yudpsocket.c */; };
+		E985C73C25F3AD9700CB895C /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = E985C6B025F3AD9600CB895C /* ytcpsocket.c */; };
+		E985C73D25F3AD9700CB895C /* ResultYTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6B125F3AD9600CB895C /* ResultYTP.swift */; };
+		E985C73E25F3AD9700CB895C /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6B325F3AD9600CB895C /* ytcpsocket.swift */; };
+		E985C73F25F3AD9700CB895C /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6B425F3AD9600CB895C /* Socket.swift */; };
+		E985C74025F3AD9700CB895C /* TCPconnections.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6B525F3AD9600CB895C /* TCPconnections.swift */; };
+		E985C74225F3AD9700CB895C /* Macserialnumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6B725F3AD9600CB895C /* Macserialnumber.swift */; };
+		E985C74325F3AD9700CB895C /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6B825F3AD9600CB895C /* Resources.swift */; };
+		E985C74425F3AD9700CB895C /* GetConfigurationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6B925F3AD9600CB895C /* GetConfigurationData.swift */; };
+		E985C74625F3AD9700CB895C /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6BB25F3AD9600CB895C /* Numbers.swift */; };
+		E985C75025F3AD9700CB895C /* DecodeLogRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6C825F3AD9600CB895C /* DecodeLogRecords.swift */; };
+		E985C75125F3AD9700CB895C /* DecodeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6C925F3AD9600CB895C /* DecodeConfiguration.swift */; };
+		E985C75525F3AD9700CB895C /* LogRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6CD25F3AD9600CB895C /* LogRecords.swift */; };
+		E985C75925F3AD9700CB895C /* SynchronizeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6D125F3AD9600CB895C /* SynchronizeConfiguration.swift */; };
+		E985C76225F3AD9700CB895C /* SshKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6DD25F3AD9600CB895C /* SshKeys.swift */; };
+		E985C76525F3AD9700CB895C /* ExecuteMultipleTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6E325F3AD9600CB895C /* ExecuteMultipleTasks.swift */; };
+		E985C76625F3AD9700CB895C /* ExecuteMultipleTasksState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6E425F3AD9600CB895C /* ExecuteMultipleTasksState.swift */; };
+		E985C76725F3AD9700CB895C /* ExecuteOneTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6E525F3AD9600CB895C /* ExecuteOneTask.swift */; };
+		E985C76C25F3AD9700CB895C /* RemoteDataNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6EC25F3AD9600CB895C /* RemoteDataNumbers.swift */; };
+		E985C76E25F3AD9700CB895C /* EstimatingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6EE25F3AD9600CB895C /* EstimatingState.swift */; };
+		E985C77025F3AD9700CB895C /* EstimateProgressDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6F125F3AD9600CB895C /* EstimateProgressDetails.swift */; };
+		E985C77125F3AD9700CB895C /* ExecuteProgressDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6F225F3AD9700CB895C /* ExecuteProgressDetails.swift */; };
+		E985C77225F3AD9700CB895C /* Logfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6F425F3AD9700CB895C /* Logfile.swift */; };
+		E985C77325F3AD9700CB895C /* ArgumentsVerify.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6F625F3AD9700CB895C /* ArgumentsVerify.swift */; };
+		E985C77425F3AD9700CB895C /* ComputeRsyncParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6F725F3AD9700CB895C /* ComputeRsyncParameters.swift */; };
+		E985C77525F3AD9700CB895C /* ArgumentsLocalcatalogInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6F825F3AD9700CB895C /* ArgumentsLocalcatalogInfo.swift */; };
+		E985C77625F3AD9700CB895C /* ArgumentsSynchronize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6F925F3AD9700CB895C /* ArgumentsSynchronize.swift */; };
+		E985C77725F3AD9700CB895C /* ArgumentsRestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6FA25F3AD9700CB895C /* ArgumentsRestore.swift */; };
+		E985C77825F3AD9700CB895C /* GetRemoteFileListingsArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6FC25F3AD9700CB895C /* GetRemoteFileListingsArguments.swift */; };
+		E985C77925F3AD9700CB895C /* SnapshotDeleteCatalogsArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6FD25F3AD9700CB895C /* SnapshotDeleteCatalogsArguments.swift */; };
+		E985C77A25F3AD9700CB895C /* RsyncParametersSingleFilesArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C6FE25F3AD9700CB895C /* RsyncParametersSingleFilesArguments.swift */; };
+		E985C77C25F3AD9700CB895C /* RestorefilesArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C70025F3AD9700CB895C /* RestorefilesArguments.swift */; };
+		E985C77D25F3AD9700CB895C /* ArgumentsSsh.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C70125F3AD9700CB895C /* ArgumentsSsh.swift */; };
+		E985C77E25F3AD9700CB895C /* SnapshotCreateCatalogArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C70225F3AD9700CB895C /* SnapshotCreateCatalogArguments.swift */; };
+		E985C77F25F3AD9700CB895C /* MultipletasksPrimaryLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C70425F3AD9700CB895C /* MultipletasksPrimaryLogging.swift */; };
+		E985C78125F3AD9700CB895C /* SingletaskPrimaryLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C70625F3AD9700CB895C /* SingletaskPrimaryLogging.swift */; };
+		E985C78425F3AD9700CB895C /* UpdateConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C70B25F3AD9700CB895C /* UpdateConfigurations.swift */; };
+		E985C78525F3AD9700CB895C /* VerifyConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C70C25F3AD9700CB895C /* VerifyConfiguration.swift */; };
+		E985C78C25F3AD9700CB895C /* RsyncUIconfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C71525F3AD9700CB895C /* RsyncUIconfigurations.swift */; };
+		E985C78E25F3AD9700CB895C /* RsyncArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C71825F3AD9700CB895C /* RsyncArguments.swift */; };
+		E985C79025F3AD9700CB895C /* SharedReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C71B25F3AD9700CB895C /* SharedReference.swift */; };
+		E985C79125F3AD9700CB895C /* ObservableUsersetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C71C25F3AD9700CB895C /* ObservableUsersetting.swift */; };
+		E985C79225F3AD9700CB895C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C71D25F3AD9700CB895C /* Extensions.swift */; };
+		E985C79325F3AD9700CB895C /* Rsyncversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C71F25F3AD9700CB895C /* Rsyncversion.swift */; };
+		E985C79725F3AD9700CB895C /* InterruptProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C72425F3AD9700CB895C /* InterruptProcess.swift */; };
+		E986073B2B617D4D002FC2BA /* ShowSSHCopyKeysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E986073A2B617D4D002FC2BA /* ShowSSHCopyKeysView.swift */; };
+		E98722202C1365F9006112CD /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E987221F2C1365F8006112CD /* DetailsView.swift */; };
+		E987648D2ADAD938001B4B7E /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E987648C2ADAD938001B4B7E /* Metal.framework */; };
+		E98A7E2929C9BB64000C8607 /* Allprofilesandtasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98A7E2829C9BB64000C8607 /* Allprofilesandtasks.swift */; };
+		E98C7AB5262D662200555977 /* ReadLogRecordsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C7AB4262D662200555977 /* ReadLogRecordsJSON.swift */; };
+		E98C7ABA262D664900555977 /* ReadConfigurationJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C7AB9262D664900555977 /* ReadConfigurationJSON.swift */; };
+		E98F608D290D034300952149 /* CommandProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F608C290D034300952149 /* CommandProcess.swift */; };
+		E997613B271998BD007153DD /* RsyncUIlogrecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = E997613A271998BD007153DD /* RsyncUIlogrecords.swift */; };
+		E99A79552B0BA1A800D3244A /* RsyncDefaultParametersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A79542B0BA1A800D3244A /* RsyncDefaultParametersView.swift */; };
+		E99A79572B0BA1C800D3244A /* RsyncParametersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A79562B0BA1C800D3244A /* RsyncParametersView.swift */; };
+		E99B56302AFFAD1800D4AA5A /* DetailsOneTaskEstimatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99B562F2AFFAD1800D4AA5A /* DetailsOneTaskEstimatingView.swift */; };
+		E99BE2342C4E677700BFE83F /* WriteExportConfigurationsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BE2332C4E677700BFE83F /* WriteExportConfigurationsJSON.swift */; };
+		E99C2400261C322E009D4DBF /* ObservableRestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C23FF261C322E009D4DBF /* ObservableRestore.swift */; };
+		E99DE0F926A32F8B00A08A69 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E99DE0F826A32F8B00A08A69 /* Credits.rtf */; };
+		E9A2AA7D2B31D0E800916896 /* EstimationInProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A2AA7C2B31D0E800916896 /* EstimationInProgressView.swift */; };
+		E9A38E2C2B32CA8700D8445E /* AlertError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A38E2B2B32CA8700D8445E /* AlertError.swift */; };
+		E9A7F7142C0F6784001AC38F /* Logsettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A7F7132C0F6784001AC38F /* Logsettings.swift */; };
+		E9AE41462AFF5A8A00F3D562 /* ExecuteEstimatedTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AE41452AFF5A8A00F3D562 /* ExecuteEstimatedTasksView.swift */; };
+		E9AE41482AFF5AAA00F3D562 /* ExecuteNoestimatedTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AE41472AFF5AAA00F3D562 /* ExecuteNoestimatedTasksView.swift */; };
+		E9B008DD2ABB427A006E333D /* Snapshotcatalogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B008DC2ABB427A006E333D /* Snapshotcatalogs.swift */; };
+		E9B34967273AE658000B053E /* OpencatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B34966273AE658000B053E /* OpencatalogView.swift */; };
+		E9B67FAC2646DAA3002BE8F6 /* PrepareOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B67FAB2646DAA3002BE8F6 /* PrepareOutput.swift */; };
+		E9B6B3E32AFFDE7500E12EB2 /* ListofTasksMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B6B3E22AFFDE7500E12EB2 /* ListofTasksMainView.swift */; };
+		E9B6BD352B120B840084BC8B /* NavigationLogfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B6BD342B120B840084BC8B /* NavigationLogfileView.swift */; };
+		E9B6DE0C2647AF810093A6D2 /* ConfirmDeleteProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B6DE0B2647AF810093A6D2 /* ConfirmDeleteProfileView.swift */; };
+		E9BB4F562903C00A00FEEA0A /* ExecuteTasksNOEstimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BB4F552903C00A00FEEA0A /* ExecuteTasksNOEstimation.swift */; };
+		E9BC17EA2BD8042C0049641B /* OutputRsyncVerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC17E92BD8042C0049641B /* OutputRsyncVerifyView.swift */; };
+		E9BD14BD2642FDC200E29347 /* TrimOutputForRestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD14BC2642FDC200E29347 /* TrimOutputForRestore.swift */; };
+		E9BD14BF2642FE6300E29347 /* TrimOutputFromRsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD14BE2642FE6300E29347 /* TrimOutputFromRsync.swift */; };
+		E9C029292BFB872E00461AD3 /* CompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C029282BFB872E00461AD3 /* CompletedView.swift */; };
+		E9C1113A2BBD8DE30041CEA0 /* ConfigurationsTableDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C111392BBD8DE30041CEA0 /* ConfigurationsTableDataView.swift */; };
+		E9C8E0CC2B2D9BB50083D1CC /* SidebarLogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C8E0CB2B2D9BB50083D1CC /* SidebarLogsView.swift */; };
+		E9C9306725FEA1CF0049A76B /* ObservableSSH.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C9306625FEA1CF0049A76B /* ObservableSSH.swift */; };
+		E9D1AFE62A2E49B600AD8125 /* ListofTasksLightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D1AFE52A2E49B600AD8125 /* ListofTasksLightView.swift */; };
+		E9D317D02B3C09B9000B8FC9 /* HomeCatalogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D317CF2B3C09B9000B8FC9 /* HomeCatalogsView.swift */; };
+		E9D5D196264A9E8600CCD8BB /* DeleteSnapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5D195264A9E8600CCD8BB /* DeleteSnapshots.swift */; };
+		E9E9CD2526779E2600EB377B /* ExecuteCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E9CD2426779E2600EB377B /* ExecuteCommands.swift */; };
+		E9ED8A5E2C4D6CEF00D3B2DD /* ExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED8A5D2C4D6CEF00D3B2DD /* ExportView.swift */; };
+		E9ED8A602C4D6D0D00D3B2DD /* ImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED8A5F2C4D6D0D00D3B2DD /* ImportView.swift */; };
+		E9F5354C290185AA007EFAE7 /* EstimateTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5354B290185AA007EFAE7 /* EstimateTasks.swift */; };
+		E9FBE7912A51C5CA0038B82D /* SnapshotLogRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBE7902A51C5CA0038B82D /* SnapshotLogRecords.swift */; };
+		E9FBF40D291AFB7000AAAC40 /* SnapshotCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBF40C291AFB7000AAAC40 /* SnapshotCommands.swift */; };
+		E9FDDD4925F3D0610050718C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9FDDD4825F3D0610050718C /* Assets.xcassets */; };
+		E9FF19022BBD272900534DF2 /* ConfigurationsTableDataMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FF19012BBD272900534DF2 /* ConfigurationsTableDataMainView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E985C5D925F3AC0800CB895C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E985C5BB25F3AC0700CB895C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E985C5C225F3AC0700CB895C;
+			remoteInfo = RsyncUI;
+		};
+		E985C5E425F3AC0800CB895C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E985C5BB25F3AC0700CB895C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E985C5C225F3AC0700CB895C;
+			remoteInfo = RsyncUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E801DC652637FD990060723F /* WriteConfigurationJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteConfigurationJSON.swift; sourceTree = "<group>"; };
+		E8518C79263807F200128796 /* WriteLogRecordsJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteLogRecordsJSON.swift; sourceTree = "<group>"; };
+		E8902992260B0EF700F4F0DC /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		E8944891267B2CB0009F9C4A /* RsyncUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsyncUIView.swift; sourceTree = "<group>"; };
+		E902346A2C4F7AA100595967 /* ReadImportConfigurationsJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadImportConfigurationsJSON.swift; sourceTree = "<group>"; };
+		E902C10E27B836CC00A75D7A /* WriteUserConfigurationJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteUserConfigurationJSON.swift; sourceTree = "<group>"; };
+		E905DFCA2B00CECD00FEFF3A /* AlltasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlltasksView.swift; sourceTree = "<group>"; };
+		E9104F7C2C18AA0E00776625 /* SSHpath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHpath.swift; sourceTree = "<group>"; };
+		E91FDCA02A5173860087B4CE /* Argumentsforrsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Argumentsforrsync.swift; sourceTree = "<group>"; };
+		E927447429407F8C009DAC1C /* CheckfornewversionofRsyncUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckfornewversionofRsyncUI.swift; sourceTree = "<group>"; };
+		E931ED952B0C82BB000BEF56 /* QuicktaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuicktaskView.swift; sourceTree = "<group>"; };
+		E9359B9926691EFD00D40C43 /* ObservableAddConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableAddConfigurations.swift; sourceTree = "<group>"; };
+		E93878C22B27355A009574CD /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		E93CC3FE2A68218200DB02EB /* ListofTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListofTasksView.swift; sourceTree = "<group>"; };
+		E93CC5722C4D4974000F8963 /* ImportExportCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportExportCommands.swift; sourceTree = "<group>"; };
+		E93D3B172AFA541D0056DC55 /* LogsbyConfigurationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogsbyConfigurationView.swift; sourceTree = "<group>"; };
+		E93D7B7C26CD920D00E290A1 /* ObservableParametersDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableParametersDefault.swift; sourceTree = "<group>"; };
+		E943B0A825FFC22200A4F30D /* RsyncProcessFilehandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsyncProcessFilehandler.swift; sourceTree = "<group>"; };
+		E9493E4A2BF4DB1000512A8A /* DetailsOneTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsOneTaskView.swift; sourceTree = "<group>"; };
+		E9493E4C2BF4DB8B00512A8A /* ObservableOutputfromrsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableOutputfromrsync.swift; sourceTree = "<group>"; };
+		E94E1E1B2A2DAA3E00011FED /* RestoreFilesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreFilesTableView.swift; sourceTree = "<group>"; };
+		E94F8337272E7ABA00D3924B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E954AD3E2AFE8F3800F3EA63 /* SidebarTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarTasksView.swift; sourceTree = "<group>"; };
+		E954AD402AFE8FBB00F3EA63 /* DetailsSummarizedTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsSummarizedTasksView.swift; sourceTree = "<group>"; };
+		E954AD422AFE901200F3EA63 /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
+		E9569EA827B809EE0038799C /* ReadUserConfigurationJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadUserConfigurationJSON.swift; sourceTree = "<group>"; };
+		E9569EAA27B80BEB0038799C /* UserConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfiguration.swift; sourceTree = "<group>"; };
+		E9569EAC27B80C220038799C /* DecodeUserConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeUserConfiguration.swift; sourceTree = "<group>"; };
+		E956D3772B0C88B9008B190F /* RestoreTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreTableView.swift; sourceTree = "<group>"; };
+		E95BD4622C29A9AA00E1C175 /* Homepath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homepath.swift; sourceTree = "<group>"; };
+		E95DD7F328EC738B007654BC /* RsyncProcessNOFilehandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsyncProcessNOFilehandler.swift; sourceTree = "<group>"; };
+		E95EDC7E26063CAA000018DE /* EditRsyncParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRsyncParameter.swift; sourceTree = "<group>"; };
+		E95EDC8926063EAA000018DE /* ObservableParametersRsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableParametersRsync.swift; sourceTree = "<group>"; };
+		E96036032B288CB600438D8B /* SidebarMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarMainView.swift; sourceTree = "<group>"; };
+		E961D0502BEC8CE300CBF9B1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		E96223942B0BDA7E00C40578 /* OutputRsyncView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputRsyncView.swift; sourceTree = "<group>"; };
+		E965D9B727E1C2E7005EFDBB /* UpdateLogs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateLogs.swift; sourceTree = "<group>"; };
+		E969669D2B49AEA90054E6C6 /* ExecuteAsyncNoEstimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteAsyncNoEstimation.swift; sourceTree = "<group>"; };
+		E96A165D272E735F00B95D3D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E96A165F272E737000B95D3D /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E96AA40C2A9923F40031B1C3 /* ListofTasksAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListofTasksAddView.swift; sourceTree = "<group>"; };
+		E9712FBB2602465D003842FD /* DeleteLogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteLogsView.swift; sourceTree = "<group>"; };
+		E9826EC52C5EBEB10085E9AD /* DefaultRsyncParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRsyncParameters.swift; sourceTree = "<group>"; };
+		E9826EC62C5EBEB10085E9AD /* RsyncParameters1to6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsyncParameters1to6.swift; sourceTree = "<group>"; };
+		E9826EC72C5EBEB10085E9AD /* RsyncParameters8to14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsyncParameters8to14.swift; sourceTree = "<group>"; };
+		E9826EC82C5EBEB10085E9AD /* RsyncParametersCompute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsyncParametersCompute.swift; sourceTree = "<group>"; };
+		E9826EC92C5EBEB10085E9AD /* RsyncParametersLinkdestarguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsyncParametersLinkdestarguments.swift; sourceTree = "<group>"; };
+		E985C5C325F3AC0700CB895C /* RsyncUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RsyncUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E985C5C625F3AC0700CB895C /* RsyncUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsyncUIApp.swift; sourceTree = "<group>"; };
+		E985C5CD25F3AC0800CB895C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E985C5D225F3AC0800CB895C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E985C5D325F3AC0800CB895C /* RsyncUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RsyncUI.entitlements; sourceTree = "<group>"; };
+		E985C5D825F3AC0800CB895C /* RsyncUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RsyncUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E985C5E325F3AC0800CB895C /* RsyncUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RsyncUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E985C60F25F3AD8400CB895C /* SidebarSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarSettingsView.swift; sourceTree = "<group>"; };
+		E985C61425F3AD8400CB895C /* Profilenames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profilenames.swift; sourceTree = "<group>"; };
+		E985C61B25F3AD8400CB895C /* Sshsettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sshsettings.swift; sourceTree = "<group>"; };
+		E985C61C25F3AD8400CB895C /* RsyncandPathsettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RsyncandPathsettings.swift; sourceTree = "<group>"; };
+		E985C61D25F3AD8400CB895C /* Environmentsettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environmentsettings.swift; sourceTree = "<group>"; };
+		E985C62225F3AD8400CB895C /* Viewmodifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Viewmodifiers.swift; sourceTree = "<group>"; };
+		E985C62825F3AD8400CB895C /* SnapshotListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotListView.swift; sourceTree = "<group>"; };
+		E985C62925F3AD8400CB895C /* SnapshotsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotsView.swift; sourceTree = "<group>"; };
+		E985C63925F3AD8400CB895C /* RsyncCommandView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RsyncCommandView.swift; sourceTree = "<group>"; };
+		E985C63B25F3AD8400CB895C /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		E985C64A25F3AD8400CB895C /* EditValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditValue.swift; sourceTree = "<group>"; };
+		E985C69625F3AD9600CB895C /* CatalogForProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogForProfile.swift; sourceTree = "<group>"; };
+		E985C69825F3AD9600CB895C /* Keypathidentityfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keypathidentityfile.swift; sourceTree = "<group>"; };
+		E985C69B25F3AD9600CB895C /* TagSnapshots.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagSnapshots.swift; sourceTree = "<group>"; };
+		E985C69C25F3AD9600CB895C /* SnapshotData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotData.swift; sourceTree = "<group>"; };
+		E985C69D25F3AD9600CB895C /* Snapshotlogsandcatalogs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snapshotlogsandcatalogs.swift; sourceTree = "<group>"; };
+		E985C6A025F3AD9600CB895C /* OutputfromProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputfromProcess.swift; sourceTree = "<group>"; };
+		E985C6A525F3AD9600CB895C /* GetfullpathforRsync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetfullpathforRsync.swift; sourceTree = "<group>"; };
+		E985C6A625F3AD9600CB895C /* MyEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEnvironment.swift; sourceTree = "<group>"; };
+		E985C6A725F3AD9600CB895C /* RsyncCommandtoDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RsyncCommandtoDisplay.swift; sourceTree = "<group>"; };
+		E985C6A825F3AD9600CB895C /* Backupconfigfiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backupconfigfiles.swift; sourceTree = "<group>"; };
+		E985C6A925F3AD9600CB895C /* SetandValidatepathforrsync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetandValidatepathforrsync.swift; sourceTree = "<group>"; };
+		E985C6AA25F3AD9600CB895C /* extensionDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensionDate.swift; sourceTree = "<group>"; };
+		E985C6AF25F3AD9600CB895C /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
+		E985C6B025F3AD9600CB895C /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		E985C6B125F3AD9600CB895C /* ResultYTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultYTP.swift; sourceTree = "<group>"; };
+		E985C6B225F3AD9600CB895C /* RsyncSwiftUI-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RsyncSwiftUI-Bridging-Header.h"; sourceTree = "<group>"; };
+		E985C6B325F3AD9600CB895C /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
+		E985C6B425F3AD9600CB895C /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		E985C6B525F3AD9600CB895C /* TCPconnections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCPconnections.swift; sourceTree = "<group>"; };
+		E985C6B725F3AD9600CB895C /* Macserialnumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Macserialnumber.swift; sourceTree = "<group>"; };
+		E985C6B825F3AD9600CB895C /* Resources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		E985C6B925F3AD9600CB895C /* GetConfigurationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetConfigurationData.swift; sourceTree = "<group>"; };
+		E985C6BB25F3AD9600CB895C /* Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
+		E985C6C825F3AD9600CB895C /* DecodeLogRecords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodeLogRecords.swift; sourceTree = "<group>"; };
+		E985C6C925F3AD9600CB895C /* DecodeConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodeConfiguration.swift; sourceTree = "<group>"; };
+		E985C6CD25F3AD9600CB895C /* LogRecords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogRecords.swift; sourceTree = "<group>"; };
+		E985C6D125F3AD9600CB895C /* SynchronizeConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynchronizeConfiguration.swift; sourceTree = "<group>"; };
+		E985C6DD25F3AD9600CB895C /* SshKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SshKeys.swift; sourceTree = "<group>"; };
+		E985C6E325F3AD9600CB895C /* ExecuteMultipleTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecuteMultipleTasks.swift; sourceTree = "<group>"; };
+		E985C6E425F3AD9600CB895C /* ExecuteMultipleTasksState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecuteMultipleTasksState.swift; sourceTree = "<group>"; };
+		E985C6E525F3AD9600CB895C /* ExecuteOneTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecuteOneTask.swift; sourceTree = "<group>"; };
+		E985C6EC25F3AD9600CB895C /* RemoteDataNumbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteDataNumbers.swift; sourceTree = "<group>"; };
+		E985C6EE25F3AD9600CB895C /* EstimatingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstimatingState.swift; sourceTree = "<group>"; };
+		E985C6F125F3AD9600CB895C /* EstimateProgressDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstimateProgressDetails.swift; sourceTree = "<group>"; };
+		E985C6F225F3AD9700CB895C /* ExecuteProgressDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecuteProgressDetails.swift; sourceTree = "<group>"; };
+		E985C6F425F3AD9700CB895C /* Logfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logfile.swift; sourceTree = "<group>"; };
+		E985C6F625F3AD9700CB895C /* ArgumentsVerify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentsVerify.swift; sourceTree = "<group>"; };
+		E985C6F725F3AD9700CB895C /* ComputeRsyncParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComputeRsyncParameters.swift; sourceTree = "<group>"; };
+		E985C6F825F3AD9700CB895C /* ArgumentsLocalcatalogInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentsLocalcatalogInfo.swift; sourceTree = "<group>"; };
+		E985C6F925F3AD9700CB895C /* ArgumentsSynchronize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentsSynchronize.swift; sourceTree = "<group>"; };
+		E985C6FA25F3AD9700CB895C /* ArgumentsRestore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentsRestore.swift; sourceTree = "<group>"; };
+		E985C6FC25F3AD9700CB895C /* GetRemoteFileListingsArguments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRemoteFileListingsArguments.swift; sourceTree = "<group>"; };
+		E985C6FD25F3AD9700CB895C /* SnapshotDeleteCatalogsArguments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotDeleteCatalogsArguments.swift; sourceTree = "<group>"; };
+		E985C6FE25F3AD9700CB895C /* RsyncParametersSingleFilesArguments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RsyncParametersSingleFilesArguments.swift; sourceTree = "<group>"; };
+		E985C70025F3AD9700CB895C /* RestorefilesArguments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestorefilesArguments.swift; sourceTree = "<group>"; };
+		E985C70125F3AD9700CB895C /* ArgumentsSsh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentsSsh.swift; sourceTree = "<group>"; };
+		E985C70225F3AD9700CB895C /* SnapshotCreateCatalogArguments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotCreateCatalogArguments.swift; sourceTree = "<group>"; };
+		E985C70425F3AD9700CB895C /* MultipletasksPrimaryLogging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipletasksPrimaryLogging.swift; sourceTree = "<group>"; };
+		E985C70625F3AD9700CB895C /* SingletaskPrimaryLogging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletaskPrimaryLogging.swift; sourceTree = "<group>"; };
+		E985C70B25F3AD9700CB895C /* UpdateConfigurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateConfigurations.swift; sourceTree = "<group>"; };
+		E985C70C25F3AD9700CB895C /* VerifyConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyConfiguration.swift; sourceTree = "<group>"; };
+		E985C71525F3AD9700CB895C /* RsyncUIconfigurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RsyncUIconfigurations.swift; sourceTree = "<group>"; };
+		E985C71825F3AD9700CB895C /* RsyncArguments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RsyncArguments.swift; sourceTree = "<group>"; };
+		E985C71B25F3AD9700CB895C /* SharedReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedReference.swift; sourceTree = "<group>"; };
+		E985C71C25F3AD9700CB895C /* ObservableUsersetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableUsersetting.swift; sourceTree = "<group>"; };
+		E985C71D25F3AD9700CB895C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E985C71F25F3AD9700CB895C /* Rsyncversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rsyncversion.swift; sourceTree = "<group>"; };
+		E985C72425F3AD9700CB895C /* InterruptProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterruptProcess.swift; sourceTree = "<group>"; };
+		E986073A2B617D4D002FC2BA /* ShowSSHCopyKeysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSSHCopyKeysView.swift; sourceTree = "<group>"; };
+		E987221F2C1365F8006112CD /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		E987648C2ADAD938001B4B7E /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		E98A7E2829C9BB64000C8607 /* Allprofilesandtasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Allprofilesandtasks.swift; sourceTree = "<group>"; };
+		E98C7AB4262D662200555977 /* ReadLogRecordsJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadLogRecordsJSON.swift; sourceTree = "<group>"; };
+		E98C7AB9262D664900555977 /* ReadConfigurationJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadConfigurationJSON.swift; sourceTree = "<group>"; };
+		E98F608C290D034300952149 /* CommandProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandProcess.swift; sourceTree = "<group>"; };
+		E997613A271998BD007153DD /* RsyncUIlogrecords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsyncUIlogrecords.swift; sourceTree = "<group>"; };
+		E99A79542B0BA1A800D3244A /* RsyncDefaultParametersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsyncDefaultParametersView.swift; sourceTree = "<group>"; };
+		E99A79562B0BA1C800D3244A /* RsyncParametersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsyncParametersView.swift; sourceTree = "<group>"; };
+		E99B562F2AFFAD1800D4AA5A /* DetailsOneTaskEstimatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsOneTaskEstimatingView.swift; sourceTree = "<group>"; };
+		E99BE2332C4E677700BFE83F /* WriteExportConfigurationsJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteExportConfigurationsJSON.swift; sourceTree = "<group>"; };
+		E99C23FF261C322E009D4DBF /* ObservableRestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableRestore.swift; sourceTree = "<group>"; };
+		E99DE0F826A32F8B00A08A69 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		E9A2AA7C2B31D0E800916896 /* EstimationInProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimationInProgressView.swift; sourceTree = "<group>"; };
+		E9A38E2B2B32CA8700D8445E /* AlertError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertError.swift; sourceTree = "<group>"; };
+		E9A7F7132C0F6784001AC38F /* Logsettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logsettings.swift; sourceTree = "<group>"; };
+		E9AE41452AFF5A8A00F3D562 /* ExecuteEstimatedTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteEstimatedTasksView.swift; sourceTree = "<group>"; };
+		E9AE41472AFF5AAA00F3D562 /* ExecuteNoestimatedTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteNoestimatedTasksView.swift; sourceTree = "<group>"; };
+		E9B008DC2ABB427A006E333D /* Snapshotcatalogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapshotcatalogs.swift; sourceTree = "<group>"; };
+		E9B34966273AE658000B053E /* OpencatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpencatalogView.swift; sourceTree = "<group>"; };
+		E9B67FAB2646DAA3002BE8F6 /* PrepareOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareOutput.swift; sourceTree = "<group>"; };
+		E9B6B3E22AFFDE7500E12EB2 /* ListofTasksMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListofTasksMainView.swift; sourceTree = "<group>"; };
+		E9B6BD342B120B840084BC8B /* NavigationLogfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLogfileView.swift; sourceTree = "<group>"; };
+		E9B6DE0B2647AF810093A6D2 /* ConfirmDeleteProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmDeleteProfileView.swift; sourceTree = "<group>"; };
+		E9BB4F552903C00A00FEEA0A /* ExecuteTasksNOEstimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteTasksNOEstimation.swift; sourceTree = "<group>"; };
+		E9BC17E92BD8042C0049641B /* OutputRsyncVerifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputRsyncVerifyView.swift; sourceTree = "<group>"; };
+		E9BD14BC2642FDC200E29347 /* TrimOutputForRestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimOutputForRestore.swift; sourceTree = "<group>"; };
+		E9BD14BE2642FE6300E29347 /* TrimOutputFromRsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimOutputFromRsync.swift; sourceTree = "<group>"; };
+		E9C029282BFB872E00461AD3 /* CompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedView.swift; sourceTree = "<group>"; };
+		E9C111392BBD8DE30041CEA0 /* ConfigurationsTableDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationsTableDataView.swift; sourceTree = "<group>"; };
+		E9C8E0CB2B2D9BB50083D1CC /* SidebarLogsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarLogsView.swift; sourceTree = "<group>"; };
+		E9C9306625FEA1CF0049A76B /* ObservableSSH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableSSH.swift; sourceTree = "<group>"; };
+		E9D1AFE52A2E49B600AD8125 /* ListofTasksLightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListofTasksLightView.swift; sourceTree = "<group>"; };
+		E9D317CF2B3C09B9000B8FC9 /* HomeCatalogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCatalogsView.swift; sourceTree = "<group>"; };
+		E9D5D195264A9E8600CCD8BB /* DeleteSnapshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteSnapshots.swift; sourceTree = "<group>"; };
+		E9E9CD2426779E2600EB377B /* ExecuteCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteCommands.swift; sourceTree = "<group>"; };
+		E9ED8A5D2C4D6CEF00D3B2DD /* ExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportView.swift; sourceTree = "<group>"; };
+		E9ED8A5F2C4D6D0D00D3B2DD /* ImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportView.swift; sourceTree = "<group>"; };
+		E9F5354B290185AA007EFAE7 /* EstimateTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateTasks.swift; sourceTree = "<group>"; };
+		E9FBE7902A51C5CA0038B82D /* SnapshotLogRecords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotLogRecords.swift; sourceTree = "<group>"; };
+		E9FBF40C291AFB7000AAAC40 /* SnapshotCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotCommands.swift; sourceTree = "<group>"; };
+		E9FDDD4825F3D0610050718C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E9FF19012BBD272900534DF2 /* ConfigurationsTableDataMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationsTableDataMainView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E985C5C025F3AC0700CB895C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E987648D2ADAD938001B4B7E /* Metal.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E985C5D525F3AC0800CB895C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E985C5E025F3AC0800CB895C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E8AC45CB26E5ED2500E0AE43 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				E9E9CD2326779E0A00EB377B /* Commands */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		E9011D43262EBFE600ECC9B8 /* Userconfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				E9569EA827B809EE0038799C /* ReadUserConfigurationJSON.swift */,
+				E902C10E27B836CC00A75D7A /* WriteUserConfigurationJSON.swift */,
+			);
+			path = Userconfiguration;
+			sourceTree = "<group>";
+		};
+		E927AAD12616E23100DC27A3 /* Quicktask */ = {
+			isa = PBXGroup;
+			children = (
+				E931ED952B0C82BB000BEF56 /* QuicktaskView.swift */,
+			);
+			path = Quicktask;
+			sourceTree = "<group>";
+		};
+		E92A71432943755700A5C734 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E985C5C625F3AC0700CB895C /* RsyncUIApp.swift */,
+				E8944891267B2CB0009F9C4A /* RsyncUIView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E9541A5A2BFF896100638B2E /* OutputViews */ = {
+			isa = PBXGroup;
+			children = (
+				E9BC17E92BD8042C0049641B /* OutputRsyncVerifyView.swift */,
+				E96223942B0BDA7E00C40578 /* OutputRsyncView.swift */,
+				E9493E4A2BF4DB1000512A8A /* DetailsOneTaskView.swift */,
+				E987221F2C1365F8006112CD /* DetailsView.swift */,
+			);
+			path = OutputViews;
+			sourceTree = "<group>";
+		};
+		E95EDC7D26063C7F000018DE /* RsyncParameters */ = {
+			isa = PBXGroup;
+			children = (
+				E99A79542B0BA1A800D3244A /* RsyncDefaultParametersView.swift */,
+				E99A79562B0BA1C800D3244A /* RsyncParametersView.swift */,
+				E985C63925F3AD8400CB895C /* RsyncCommandView.swift */,
+				E95EDC7E26063CAA000018DE /* EditRsyncParameter.swift */,
+			);
+			path = RsyncParameters;
+			sourceTree = "<group>";
+		};
+		E9826EC42C5EBE860085E9AD /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				E9826ECB2C5EBEB10085E9AD /* RsyncArguments */,
+			);
+			path = Package;
+			sourceTree = "<group>";
+		};
+		E9826ECB2C5EBEB10085E9AD /* RsyncArguments */ = {
+			isa = PBXGroup;
+			children = (
+				E9826EC52C5EBEB10085E9AD /* DefaultRsyncParameters.swift */,
+				E9826EC62C5EBEB10085E9AD /* RsyncParameters1to6.swift */,
+				E9826EC72C5EBEB10085E9AD /* RsyncParameters8to14.swift */,
+				E9826EC82C5EBEB10085E9AD /* RsyncParametersCompute.swift */,
+				E9826EC92C5EBEB10085E9AD /* RsyncParametersLinkdestarguments.swift */,
+			);
+			path = RsyncArguments;
+			sourceTree = "<group>";
+		};
+		E985C5BA25F3AC0700CB895C = {
+			isa = PBXGroup;
+			children = (
+				E99DE0F826A32F8B00A08A69 /* Credits.rtf */,
+				E985C5C525F3AC0700CB895C /* RsyncUI */,
+				E985C5C425F3AC0700CB895C /* Products */,
+				E987648B2ADAD938001B4B7E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E985C5C425F3AC0700CB895C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E985C5C325F3AC0700CB895C /* RsyncUI.app */,
+				E985C5D825F3AC0800CB895C /* RsyncUITests.xctest */,
+				E985C5E325F3AC0800CB895C /* RsyncUIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E985C5C525F3AC0700CB895C /* RsyncUI */ = {
+			isa = PBXGroup;
+			children = (
+				E9FDDD4825F3D0610050718C /* Assets.xcassets */,
+				E985C5D225F3AC0800CB895C /* Info.plist */,
+				E96A165C272E735F00B95D3D /* Localizable.strings */,
+				E985C5D325F3AC0800CB895C /* RsyncUI.entitlements */,
+				E92A71432943755700A5C734 /* Main */,
+				E985C60925F3AD8400CB895C /* Views */,
+				E985C69225F3AD9600CB895C /* Model */,
+				E985C5CC25F3AC0800CB895C /* Preview Content */,
+			);
+			path = RsyncUI;
+			sourceTree = "<group>";
+		};
+		E985C5CC25F3AC0800CB895C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E985C5CD25F3AC0800CB895C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E985C60925F3AD8400CB895C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E9ED8A5C2C4D6CC300D3B2DD /* ExportImport */,
+				E9541A5A2BFF896100638B2E /* OutputViews */,
+				E8AC45CB26E5ED2500E0AE43 /* Tools */,
+				E985C62025F3AD8400CB895C /* Modifiers */,
+				E985C60A25F3AD8400CB895C /* Sidebar */,
+				E99C23F9261C2D21009D4DBF /* Restore */,
+				E927AAD12616E23100DC27A3 /* Quicktask */,
+				E95EDC7D26063C7F000018DE /* RsyncParameters */,
+				E985C64E25F3AD8400CB895C /* Tasks */,
+				E985C62325F3AD8400CB895C /* Detailsview */,
+				E985C62625F3AD8400CB895C /* Snapshots */,
+				E985C61525F3AD8400CB895C /* Configurations */,
+				E985C61A25F3AD8400CB895C /* Settings */,
+				E985C61E25F3AD8400CB895C /* FilelogView */,
+				E985C64125F3AD8400CB895C /* LogRecords */,
+				E985C64625F3AD8400CB895C /* Add */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E985C60A25F3AD8400CB895C /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				E96036032B288CB600438D8B /* SidebarMainView.swift */,
+				E985C61425F3AD8400CB895C /* Profilenames.swift */,
+			);
+			path = Sidebar;
+			sourceTree = "<group>";
+		};
+		E985C61525F3AD8400CB895C /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				E9B6B3E22AFFDE7500E12EB2 /* ListofTasksMainView.swift */,
+				E93CC3FE2A68218200DB02EB /* ListofTasksView.swift */,
+				E9D1AFE52A2E49B600AD8125 /* ListofTasksLightView.swift */,
+				E96AA40C2A9923F40031B1C3 /* ListofTasksAddView.swift */,
+				E9FF19012BBD272900534DF2 /* ConfigurationsTableDataMainView.swift */,
+				E9C111392BBD8DE30041CEA0 /* ConfigurationsTableDataView.swift */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		E985C61A25F3AD8400CB895C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E985C60F25F3AD8400CB895C /* SidebarSettingsView.swift */,
+				E985C63B25F3AD8400CB895C /* AboutView.swift */,
+				E985C61C25F3AD8400CB895C /* RsyncandPathsettings.swift */,
+				E9A7F7132C0F6784001AC38F /* Logsettings.swift */,
+				E985C61D25F3AD8400CB895C /* Environmentsettings.swift */,
+				E985C61B25F3AD8400CB895C /* Sshsettings.swift */,
+				E986073A2B617D4D002FC2BA /* ShowSSHCopyKeysView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E985C61E25F3AD8400CB895C /* FilelogView */ = {
+			isa = PBXGroup;
+			children = (
+				E9B6BD342B120B840084BC8B /* NavigationLogfileView.swift */,
+			);
+			path = FilelogView;
+			sourceTree = "<group>";
+		};
+		E985C62025F3AD8400CB895C /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				E985C62225F3AD8400CB895C /* Viewmodifiers.swift */,
+				E8902992260B0EF700F4F0DC /* ButtonStyles.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		E985C62325F3AD8400CB895C /* Detailsview */ = {
+			isa = PBXGroup;
+			children = (
+				E905DFCA2B00CECD00FEFF3A /* AlltasksView.swift */,
+				E99B562F2AFFAD1800D4AA5A /* DetailsOneTaskEstimatingView.swift */,
+				E954AD402AFE8FBB00F3EA63 /* DetailsSummarizedTasksView.swift */,
+				E9A2AA7C2B31D0E800916896 /* EstimationInProgressView.swift */,
+			);
+			path = Detailsview;
+			sourceTree = "<group>";
+		};
+		E985C62625F3AD8400CB895C /* Snapshots */ = {
+			isa = PBXGroup;
+			children = (
+				E985C62825F3AD8400CB895C /* SnapshotListView.swift */,
+				E985C62925F3AD8400CB895C /* SnapshotsView.swift */,
+			);
+			path = Snapshots;
+			sourceTree = "<group>";
+		};
+		E985C64125F3AD8400CB895C /* LogRecords */ = {
+			isa = PBXGroup;
+			children = (
+				E9C8E0CB2B2D9BB50083D1CC /* SidebarLogsView.swift */,
+				E93D3B172AFA541D0056DC55 /* LogsbyConfigurationView.swift */,
+				E9712FBB2602465D003842FD /* DeleteLogsView.swift */,
+				E965D9B727E1C2E7005EFDBB /* UpdateLogs.swift */,
+			);
+			path = LogRecords;
+			sourceTree = "<group>";
+		};
+		E985C64625F3AD8400CB895C /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				E93878C22B27355A009574CD /* AddTaskView.swift */,
+				E9B34966273AE658000B053E /* OpencatalogView.swift */,
+				E985C64A25F3AD8400CB895C /* EditValue.swift */,
+				E9B6DE0B2647AF810093A6D2 /* ConfirmDeleteProfileView.swift */,
+				E9D317CF2B3C09B9000B8FC9 /* HomeCatalogsView.swift */,
+				E961D0502BEC8CE300CBF9B1 /* ProfileView.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		E985C64E25F3AD8400CB895C /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				E954AD3E2AFE8F3800F3EA63 /* SidebarTasksView.swift */,
+				E9AE41452AFF5A8A00F3D562 /* ExecuteEstimatedTasksView.swift */,
+				E9AE41472AFF5AAA00F3D562 /* ExecuteNoestimatedTasksView.swift */,
+				E954AD422AFE901200F3EA63 /* TasksView.swift */,
+				E9C029282BFB872E00461AD3 /* CompletedView.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		E985C69225F3AD9600CB895C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E9CCECD52643AD3A007BE237 /* Newversion */,
+				E985C69525F3AD9600CB895C /* FilesAndCatalogs */,
+				E985C69A25F3AD9600CB895C /* Snapshots */,
+				E985C69F25F3AD9600CB895C /* Output */,
+				E985C6A225F3AD9600CB895C /* Utils */,
+				E985C6BF25F3AD9600CB895C /* Storage */,
+				E985C6DC25F3AD9600CB895C /* Ssh */,
+				E985C6DE25F3AD9600CB895C /* Execution */,
+				E985C6F325F3AD9700CB895C /* Logfile */,
+				E985C71725F3AD9700CB895C /* AddParametersRsync */,
+				E985C6F525F3AD9700CB895C /* ComputeParametersRsync */,
+				E985C6FB25F3AD9700CB895C /* ProcessArguments */,
+				E985C70325F3AD9700CB895C /* Loggdata */,
+				E985C70725F3AD9700CB895C /* Data */,
+				E985C71A25F3AD9700CB895C /* Global */,
+				E985C71E25F3AD9700CB895C /* Process */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E985C69525F3AD9600CB895C /* FilesAndCatalogs */ = {
+			isa = PBXGroup;
+			children = (
+				E985C69625F3AD9600CB895C /* CatalogForProfile.swift */,
+				E985C69825F3AD9600CB895C /* Keypathidentityfile.swift */,
+				E9104F7C2C18AA0E00776625 /* SSHpath.swift */,
+				E95BD4622C29A9AA00E1C175 /* Homepath.swift */,
+			);
+			path = FilesAndCatalogs;
+			sourceTree = "<group>";
+		};
+		E985C69A25F3AD9600CB895C /* Snapshots */ = {
+			isa = PBXGroup;
+			children = (
+				E9FBE7902A51C5CA0038B82D /* SnapshotLogRecords.swift */,
+				E985C69B25F3AD9600CB895C /* TagSnapshots.swift */,
+				E985C69C25F3AD9600CB895C /* SnapshotData.swift */,
+				E985C69D25F3AD9600CB895C /* Snapshotlogsandcatalogs.swift */,
+				E9D5D195264A9E8600CCD8BB /* DeleteSnapshots.swift */,
+				E9B008DC2ABB427A006E333D /* Snapshotcatalogs.swift */,
+			);
+			path = Snapshots;
+			sourceTree = "<group>";
+		};
+		E985C69F25F3AD9600CB895C /* Output */ = {
+			isa = PBXGroup;
+			children = (
+				E985C6A025F3AD9600CB895C /* OutputfromProcess.swift */,
+				E9BD14BC2642FDC200E29347 /* TrimOutputForRestore.swift */,
+				E9BD14BE2642FE6300E29347 /* TrimOutputFromRsync.swift */,
+				E9B67FAB2646DAA3002BE8F6 /* PrepareOutput.swift */,
+			);
+			path = Output;
+			sourceTree = "<group>";
+		};
+		E985C6A225F3AD9600CB895C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E985C6A525F3AD9600CB895C /* GetfullpathforRsync.swift */,
+				E985C6A625F3AD9600CB895C /* MyEnvironment.swift */,
+				E985C6A725F3AD9600CB895C /* RsyncCommandtoDisplay.swift */,
+				E985C6A825F3AD9600CB895C /* Backupconfigfiles.swift */,
+				E985C6A925F3AD9600CB895C /* SetandValidatepathforrsync.swift */,
+				E985C6AA25F3AD9600CB895C /* extensionDate.swift */,
+				E985C6AE25F3AD9600CB895C /* yudpsocket */,
+				E985C6B525F3AD9600CB895C /* TCPconnections.swift */,
+				E985C6B725F3AD9600CB895C /* Macserialnumber.swift */,
+				E985C6B825F3AD9600CB895C /* Resources.swift */,
+				E985C6B925F3AD9600CB895C /* GetConfigurationData.swift */,
+				E985C6BB25F3AD9600CB895C /* Numbers.swift */,
+				E98A7E2829C9BB64000C8607 /* Allprofilesandtasks.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E985C6AE25F3AD9600CB895C /* yudpsocket */ = {
+			isa = PBXGroup;
+			children = (
+				E985C6AF25F3AD9600CB895C /* yudpsocket.c */,
+				E985C6B025F3AD9600CB895C /* ytcpsocket.c */,
+				E985C6B125F3AD9600CB895C /* ResultYTP.swift */,
+				E985C6B225F3AD9600CB895C /* RsyncSwiftUI-Bridging-Header.h */,
+				E985C6B325F3AD9600CB895C /* ytcpsocket.swift */,
+				E985C6B425F3AD9600CB895C /* Socket.swift */,
+			);
+			path = yudpsocket;
+			sourceTree = "<group>";
+		};
+		E985C6BF25F3AD9600CB895C /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				E99BE2322C4E673800BFE83F /* ExportImport */,
+				E801DC652637FD990060723F /* WriteConfigurationJSON.swift */,
+				E8518C79263807F200128796 /* WriteLogRecordsJSON.swift */,
+				E98C7AB9262D664900555977 /* ReadConfigurationJSON.swift */,
+				E98C7AB4262D662200555977 /* ReadLogRecordsJSON.swift */,
+				E9011D43262EBFE600ECC9B8 /* Userconfiguration */,
+				E985C6C725F3AD9600CB895C /* Basic */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		E985C6C725F3AD9600CB895C /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				E9AA5400262EEB2E0009DF32 /* JSON */,
+				E985C6CD25F3AD9600CB895C /* LogRecords.swift */,
+				E985C6D125F3AD9600CB895C /* SynchronizeConfiguration.swift */,
+				E9569EAA27B80BEB0038799C /* UserConfiguration.swift */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		E985C6DC25F3AD9600CB895C /* Ssh */ = {
+			isa = PBXGroup;
+			children = (
+				E985C6DD25F3AD9600CB895C /* SshKeys.swift */,
+			);
+			path = Ssh;
+			sourceTree = "<group>";
+		};
+		E985C6DE25F3AD9600CB895C /* Execution */ = {
+			isa = PBXGroup;
+			children = (
+				E9826EC42C5EBE860085E9AD /* Package */,
+				E985C6E225F3AD9600CB895C /* ExecuteMultipleTasks */,
+				E985C6EA25F3AD9600CB895C /* Estimation */,
+				E985C6EF25F3AD9600CB895C /* ProgressCounts */,
+			);
+			path = Execution;
+			sourceTree = "<group>";
+		};
+		E985C6E225F3AD9600CB895C /* ExecuteMultipleTasks */ = {
+			isa = PBXGroup;
+			children = (
+				E9BB4F552903C00A00FEEA0A /* ExecuteTasksNOEstimation.swift */,
+				E985C6E325F3AD9600CB895C /* ExecuteMultipleTasks.swift */,
+				E985C6E425F3AD9600CB895C /* ExecuteMultipleTasksState.swift */,
+				E985C6E525F3AD9600CB895C /* ExecuteOneTask.swift */,
+			);
+			path = ExecuteMultipleTasks;
+			sourceTree = "<group>";
+		};
+		E985C6EA25F3AD9600CB895C /* Estimation */ = {
+			isa = PBXGroup;
+			children = (
+				E9F5354B290185AA007EFAE7 /* EstimateTasks.swift */,
+				E985C6EC25F3AD9600CB895C /* RemoteDataNumbers.swift */,
+				E985C6EE25F3AD9600CB895C /* EstimatingState.swift */,
+			);
+			path = Estimation;
+			sourceTree = "<group>";
+		};
+		E985C6EF25F3AD9600CB895C /* ProgressCounts */ = {
+			isa = PBXGroup;
+			children = (
+				E985C6F125F3AD9600CB895C /* EstimateProgressDetails.swift */,
+				E985C6F225F3AD9700CB895C /* ExecuteProgressDetails.swift */,
+				E969669D2B49AEA90054E6C6 /* ExecuteAsyncNoEstimation.swift */,
+			);
+			path = ProgressCounts;
+			sourceTree = "<group>";
+		};
+		E985C6F325F3AD9700CB895C /* Logfile */ = {
+			isa = PBXGroup;
+			children = (
+				E985C6F425F3AD9700CB895C /* Logfile.swift */,
+			);
+			path = Logfile;
+			sourceTree = "<group>";
+		};
+		E985C6F525F3AD9700CB895C /* ComputeParametersRsync */ = {
+			isa = PBXGroup;
+			children = (
+				E985C6F625F3AD9700CB895C /* ArgumentsVerify.swift */,
+				E985C6F725F3AD9700CB895C /* ComputeRsyncParameters.swift */,
+				E985C6F825F3AD9700CB895C /* ArgumentsLocalcatalogInfo.swift */,
+				E985C6F925F3AD9700CB895C /* ArgumentsSynchronize.swift */,
+				E985C6FA25F3AD9700CB895C /* ArgumentsRestore.swift */,
+				E91FDCA02A5173860087B4CE /* Argumentsforrsync.swift */,
+			);
+			path = ComputeParametersRsync;
+			sourceTree = "<group>";
+		};
+		E985C6FB25F3AD9700CB895C /* ProcessArguments */ = {
+			isa = PBXGroup;
+			children = (
+				E985C6FC25F3AD9700CB895C /* GetRemoteFileListingsArguments.swift */,
+				E985C6FD25F3AD9700CB895C /* SnapshotDeleteCatalogsArguments.swift */,
+				E985C6FE25F3AD9700CB895C /* RsyncParametersSingleFilesArguments.swift */,
+				E985C70025F3AD9700CB895C /* RestorefilesArguments.swift */,
+				E985C70125F3AD9700CB895C /* ArgumentsSsh.swift */,
+				E985C70225F3AD9700CB895C /* SnapshotCreateCatalogArguments.swift */,
+			);
+			path = ProcessArguments;
+			sourceTree = "<group>";
+		};
+		E985C70325F3AD9700CB895C /* Loggdata */ = {
+			isa = PBXGroup;
+			children = (
+				E985C70425F3AD9700CB895C /* MultipletasksPrimaryLogging.swift */,
+				E985C70625F3AD9700CB895C /* SingletaskPrimaryLogging.swift */,
+			);
+			path = Loggdata;
+			sourceTree = "<group>";
+		};
+		E985C70725F3AD9700CB895C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E985C70825F3AD9700CB895C /* Configurations */,
+				E985C71525F3AD9700CB895C /* RsyncUIconfigurations.swift */,
+				E997613A271998BD007153DD /* RsyncUIlogrecords.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E985C70825F3AD9700CB895C /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				E985C70B25F3AD9700CB895C /* UpdateConfigurations.swift */,
+				E985C70C25F3AD9700CB895C /* VerifyConfiguration.swift */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		E985C71725F3AD9700CB895C /* AddParametersRsync */ = {
+			isa = PBXGroup;
+			children = (
+				E985C71825F3AD9700CB895C /* RsyncArguments.swift */,
+			);
+			path = AddParametersRsync;
+			sourceTree = "<group>";
+		};
+		E985C71A25F3AD9700CB895C /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				E985C71D25F3AD9700CB895C /* Extensions.swift */,
+				E985C71B25F3AD9700CB895C /* SharedReference.swift */,
+				E95EDC8926063EAA000018DE /* ObservableParametersRsync.swift */,
+				E93D7B7C26CD920D00E290A1 /* ObservableParametersDefault.swift */,
+				E985C71C25F3AD9700CB895C /* ObservableUsersetting.swift */,
+				E9C9306625FEA1CF0049A76B /* ObservableSSH.swift */,
+				E9359B9926691EFD00D40C43 /* ObservableAddConfigurations.swift */,
+				E99C23FF261C322E009D4DBF /* ObservableRestore.swift */,
+				E9A38E2B2B32CA8700D8445E /* AlertError.swift */,
+				E9493E4C2BF4DB8B00512A8A /* ObservableOutputfromrsync.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		E985C71E25F3AD9700CB895C /* Process */ = {
+			isa = PBXGroup;
+			children = (
+				E985C71F25F3AD9700CB895C /* Rsyncversion.swift */,
+				E985C72425F3AD9700CB895C /* InterruptProcess.swift */,
+				E985C72225F3AD9700CB895C /* Main */,
+			);
+			path = Process;
+			sourceTree = "<group>";
+		};
+		E985C72225F3AD9700CB895C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E95DD7F328EC738B007654BC /* RsyncProcessNOFilehandler.swift */,
+				E943B0A825FFC22200A4F30D /* RsyncProcessFilehandler.swift */,
+				E98F608C290D034300952149 /* CommandProcess.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E987648B2ADAD938001B4B7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E987648C2ADAD938001B4B7E /* Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E99BE2322C4E673800BFE83F /* ExportImport */ = {
+			isa = PBXGroup;
+			children = (
+				E99BE2332C4E677700BFE83F /* WriteExportConfigurationsJSON.swift */,
+				E902346A2C4F7AA100595967 /* ReadImportConfigurationsJSON.swift */,
+			);
+			path = ExportImport;
+			sourceTree = "<group>";
+		};
+		E99C23F9261C2D21009D4DBF /* Restore */ = {
+			isa = PBXGroup;
+			children = (
+				E956D3772B0C88B9008B190F /* RestoreTableView.swift */,
+				E94E1E1B2A2DAA3E00011FED /* RestoreFilesTableView.swift */,
+			);
+			path = Restore;
+			sourceTree = "<group>";
+		};
+		E9AA5400262EEB2E0009DF32 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				E985C6C925F3AD9600CB895C /* DecodeConfiguration.swift */,
+				E985C6C825F3AD9600CB895C /* DecodeLogRecords.swift */,
+				E9569EAC27B80C220038799C /* DecodeUserConfiguration.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		E9CCECD52643AD3A007BE237 /* Newversion */ = {
+			isa = PBXGroup;
+			children = (
+				E927447429407F8C009DAC1C /* CheckfornewversionofRsyncUI.swift */,
+			);
+			path = Newversion;
+			sourceTree = "<group>";
+		};
+		E9E9CD2326779E0A00EB377B /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				E9E9CD2426779E2600EB377B /* ExecuteCommands.swift */,
+				E9FBF40C291AFB7000AAAC40 /* SnapshotCommands.swift */,
+				E93CC5722C4D4974000F8963 /* ImportExportCommands.swift */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		E9ED8A5C2C4D6CC300D3B2DD /* ExportImport */ = {
+			isa = PBXGroup;
+			children = (
+				E9ED8A5D2C4D6CEF00D3B2DD /* ExportView.swift */,
+				E9ED8A5F2C4D6D0D00D3B2DD /* ImportView.swift */,
+			);
+			path = ExportImport;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E985C5C225F3AC0700CB895C /* RsyncUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E985C5EC25F3AC0800CB895C /* Build configuration list for PBXNativeTarget "RsyncUI" */;
+			buildPhases = (
+				E985C5BF25F3AC0700CB895C /* Sources */,
+				E985C5C025F3AC0700CB895C /* Frameworks */,
+				E985C5C125F3AC0700CB895C /* Resources */,
+				E985C7A825F3B0E200CB895C /* Run Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RsyncUI;
+			packageProductDependencies = (
+			);
+			productName = RsyncUI;
+			productReference = E985C5C325F3AC0700CB895C /* RsyncUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E985C5D725F3AC0800CB895C /* RsyncUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E985C5EF25F3AC0800CB895C /* Build configuration list for PBXNativeTarget "RsyncUITests" */;
+			buildPhases = (
+				E985C5D425F3AC0800CB895C /* Sources */,
+				E985C5D525F3AC0800CB895C /* Frameworks */,
+				E985C5D625F3AC0800CB895C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E985C5DA25F3AC0800CB895C /* PBXTargetDependency */,
+			);
+			name = RsyncUITests;
+			productName = RsyncUITests;
+			productReference = E985C5D825F3AC0800CB895C /* RsyncUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E985C5E225F3AC0800CB895C /* RsyncUIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E985C5F225F3AC0800CB895C /* Build configuration list for PBXNativeTarget "RsyncUIUITests" */;
+			buildPhases = (
+				E985C5DF25F3AC0800CB895C /* Sources */,
+				E985C5E025F3AC0800CB895C /* Frameworks */,
+				E985C5E125F3AC0800CB895C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E985C5E525F3AC0800CB895C /* PBXTargetDependency */,
+			);
+			name = RsyncUIUITests;
+			productName = RsyncUIUITests;
+			productReference = E985C5E325F3AC0800CB895C /* RsyncUIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E985C5BB25F3AC0700CB895C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					E985C5C225F3AC0700CB895C = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					E985C5D725F3AC0800CB895C = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = E985C5C225F3AC0700CB895C;
+					};
+					E985C5E225F3AC0800CB895C = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = E985C5C225F3AC0700CB895C;
+					};
+				};
+			};
+			buildConfigurationList = E985C5BE25F3AC0700CB895C /* Build configuration list for PBXProject "RsyncUI" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				nb,
+				de,
+			);
+			mainGroup = E985C5BA25F3AC0700CB895C;
+			packageReferences = (
+			);
+			productRefGroup = E985C5C425F3AC0700CB895C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E985C5C225F3AC0700CB895C /* RsyncUI */,
+				E985C5D725F3AC0800CB895C /* RsyncUITests */,
+				E985C5E225F3AC0800CB895C /* RsyncUIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E985C5C125F3AC0700CB895C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E99DE0F926A32F8B00A08A69 /* Credits.rtf in Resources */,
+				E96A165E272E735F00B95D3D /* Localizable.strings in Resources */,
+				E985C5CE25F3AC0800CB895C /* Preview Assets.xcassets in Resources */,
+				E9FDDD4925F3D0610050718C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E985C5D625F3AC0800CB895C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E985C5E125F3AC0800CB895C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E985C7A825F3B0E200CB895C /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which /opt/homebrew/bin/swiftlint >/dev/null; then\n    /opt/homebrew/bin/swiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\nif which /opt/homebrew/bin/swiftformat >/dev/null; then\n    /opt/homebrew/bin/swiftformat --swiftversion 6 --disable enumNamespaces .\nelse\n  echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E985C5BF25F3AC0700CB895C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9B008DD2ABB427A006E333D /* Snapshotcatalogs.swift in Sources */,
+				E985C66725F3AD8400CB895C /* Viewmodifiers.swift in Sources */,
+				E985C65825F3AD8400CB895C /* SidebarSettingsView.swift in Sources */,
+				E985C77D25F3AD9700CB895C /* ArgumentsSsh.swift in Sources */,
+				E96223952B0BDA7E00C40578 /* OutputRsyncView.swift in Sources */,
+				E985C77E25F3AD9700CB895C /* SnapshotCreateCatalogArguments.swift in Sources */,
+				E8944892267B2CB0009F9C4A /* RsyncUIView.swift in Sources */,
+				E9BB4F562903C00A00FEEA0A /* ExecuteTasksNOEstimation.swift in Sources */,
+				E9493E4D2BF4DB8B00512A8A /* ObservableOutputfromrsync.swift in Sources */,
+				E985C76E25F3AD9700CB895C /* EstimatingState.swift in Sources */,
+				E985C66B25F3AD8400CB895C /* SnapshotListView.swift in Sources */,
+				E985C73225F3AD9700CB895C /* GetfullpathforRsync.swift in Sources */,
+				E985C76C25F3AD9700CB895C /* RemoteDataNumbers.swift in Sources */,
+				E927447529407F8C009DAC1C /* CheckfornewversionofRsyncUI.swift in Sources */,
+				E95EDC8A26063EAA000018DE /* ObservableParametersRsync.swift in Sources */,
+				E985C78125F3AD9700CB895C /* SingletaskPrimaryLogging.swift in Sources */,
+				E985C77C25F3AD9700CB895C /* RestorefilesArguments.swift in Sources */,
+				E94E1E1C2A2DAA3E00011FED /* RestoreFilesTableView.swift in Sources */,
+				E985C76625F3AD9700CB895C /* ExecuteMultipleTasksState.swift in Sources */,
+				E985C78425F3AD9700CB895C /* UpdateConfigurations.swift in Sources */,
+				E9BD14BD2642FDC200E29347 /* TrimOutputForRestore.swift in Sources */,
+				E985C73D25F3AD9700CB895C /* ResultYTP.swift in Sources */,
+				E9D1AFE62A2E49B600AD8125 /* ListofTasksLightView.swift in Sources */,
+				E95EDC7F26063CAA000018DE /* EditRsyncParameter.swift in Sources */,
+				E9569EA927B809EE0038799C /* ReadUserConfigurationJSON.swift in Sources */,
+				E9569EAD27B80C220038799C /* DecodeUserConfiguration.swift in Sources */,
+				E801DC662637FD990060723F /* WriteConfigurationJSON.swift in Sources */,
+				E93CC3FF2A68218200DB02EB /* ListofTasksView.swift in Sources */,
+				E985C66325F3AD8400CB895C /* RsyncandPathsettings.swift in Sources */,
+				E985C72D25F3AD9700CB895C /* Snapshotlogsandcatalogs.swift in Sources */,
+				E9AE41462AFF5A8A00F3D562 /* ExecuteEstimatedTasksView.swift in Sources */,
+				E985C72925F3AD9700CB895C /* Keypathidentityfile.swift in Sources */,
+				E985C72E25F3AD9700CB895C /* OutputfromProcess.swift in Sources */,
+				E96036042B288CB600438D8B /* SidebarMainView.swift in Sources */,
+				E98C7ABA262D664900555977 /* ReadConfigurationJSON.swift in Sources */,
+				E985C77825F3AD9700CB895C /* GetRemoteFileListingsArguments.swift in Sources */,
+				E9C029292BFB872E00461AD3 /* CompletedView.swift in Sources */,
+				E9B6DE0C2647AF810093A6D2 /* ConfirmDeleteProfileView.swift in Sources */,
+				E9C9306725FEA1CF0049A76B /* ObservableSSH.swift in Sources */,
+				E99A79552B0BA1A800D3244A /* RsyncDefaultParametersView.swift in Sources */,
+				E954AD432AFE901200F3EA63 /* TasksView.swift in Sources */,
+				E9ED8A5E2C4D6CEF00D3B2DD /* ExportView.swift in Sources */,
+				E9E9CD2526779E2600EB377B /* ExecuteCommands.swift in Sources */,
+				E985C74625F3AD9700CB895C /* Numbers.swift in Sources */,
+				E9FBE7912A51C5CA0038B82D /* SnapshotLogRecords.swift in Sources */,
+				E985C74225F3AD9700CB895C /* Macserialnumber.swift in Sources */,
+				E985C74325F3AD9700CB895C /* Resources.swift in Sources */,
+				E956D3782B0C88B9008B190F /* RestoreTableView.swift in Sources */,
+				E9BD14BF2642FE6300E29347 /* TrimOutputFromRsync.swift in Sources */,
+				E985C77325F3AD9700CB895C /* ArgumentsVerify.swift in Sources */,
+				E985C67B25F3AD8400CB895C /* AboutView.swift in Sources */,
+				E985C77425F3AD9700CB895C /* ComputeRsyncParameters.swift in Sources */,
+				E985C72B25F3AD9700CB895C /* TagSnapshots.swift in Sources */,
+				E985C73C25F3AD9700CB895C /* ytcpsocket.c in Sources */,
+				E985C73725F3AD9700CB895C /* extensionDate.swift in Sources */,
+				E9F5354C290185AA007EFAE7 /* EstimateTasks.swift in Sources */,
+				E985C77625F3AD9700CB895C /* ArgumentsSynchronize.swift in Sources */,
+				E986073B2B617D4D002FC2BA /* ShowSSHCopyKeysView.swift in Sources */,
+				E985C76725F3AD9700CB895C /* ExecuteOneTask.swift in Sources */,
+				E985C78525F3AD9700CB895C /* VerifyConfiguration.swift in Sources */,
+				E905DFCB2B00CECD00FEFF3A /* AlltasksView.swift in Sources */,
+				E91FDCA12A5173860087B4CE /* Argumentsforrsync.swift in Sources */,
+				E985C5C725F3AC0700CB895C /* RsyncUIApp.swift in Sources */,
+				E985C73F25F3AD9700CB895C /* Socket.swift in Sources */,
+				E98A7E2929C9BB64000C8607 /* Allprofilesandtasks.swift in Sources */,
+				E9B67FAC2646DAA3002BE8F6 /* PrepareOutput.swift in Sources */,
+				E99A79572B0BA1C800D3244A /* RsyncParametersView.swift in Sources */,
+				E9B34967273AE658000B053E /* OpencatalogView.swift in Sources */,
+				E985C65D25F3AD8400CB895C /* Profilenames.swift in Sources */,
+				E985C77925F3AD9700CB895C /* SnapshotDeleteCatalogsArguments.swift in Sources */,
+				E99C2400261C322E009D4DBF /* ObservableRestore.swift in Sources */,
+				E985C74025F3AD9700CB895C /* TCPconnections.swift in Sources */,
+				E9493E4B2BF4DB1000512A8A /* DetailsOneTaskView.swift in Sources */,
+				E9ED8A602C4D6D0D00D3B2DD /* ImportView.swift in Sources */,
+				E8518C7A263807F200128796 /* WriteLogRecordsJSON.swift in Sources */,
+				E985C77725F3AD9700CB895C /* ArgumentsRestore.swift in Sources */,
+				E961D0512BEC8CE300CBF9B1 /* ProfileView.swift in Sources */,
+				E98722202C1365F9006112CD /* DetailsView.swift in Sources */,
+				E98F608D290D034300952149 /* CommandProcess.swift in Sources */,
+				E985C77025F3AD9700CB895C /* EstimateProgressDetails.swift in Sources */,
+				E9569EAB27B80BEB0038799C /* UserConfiguration.swift in Sources */,
+				E9A7F7142C0F6784001AC38F /* Logsettings.swift in Sources */,
+				E93D7B7D26CD920D00E290A1 /* ObservableParametersDefault.swift in Sources */,
+				E93D3B182AFA541D0056DC55 /* LogsbyConfigurationView.swift in Sources */,
+				E985C77525F3AD9700CB895C /* ArgumentsLocalcatalogInfo.swift in Sources */,
+				E985C77225F3AD9700CB895C /* Logfile.swift in Sources */,
+				E969669E2B49AEA90054E6C6 /* ExecuteAsyncNoEstimation.swift in Sources */,
+				E9C8E0CC2B2D9BB50083D1CC /* SidebarLogsView.swift in Sources */,
+				E9A38E2C2B32CA8700D8445E /* AlertError.swift in Sources */,
+				E99B56302AFFAD1800D4AA5A /* DetailsOneTaskEstimatingView.swift in Sources */,
+				E95BD4632C29A9AA00E1C175 /* Homepath.swift in Sources */,
+				E985C73425F3AD9700CB895C /* RsyncCommandtoDisplay.swift in Sources */,
+				E9FF19022BBD272900534DF2 /* ConfigurationsTableDataMainView.swift in Sources */,
+				E985C78C25F3AD9700CB895C /* RsyncUIconfigurations.swift in Sources */,
+				E985C73525F3AD9700CB895C /* Backupconfigfiles.swift in Sources */,
+				E9B6B3E32AFFDE7500E12EB2 /* ListofTasksMainView.swift in Sources */,
+				E8902993260B0EF700F4F0DC /* ButtonStyles.swift in Sources */,
+				E943B0A925FFC22200A4F30D /* RsyncProcessFilehandler.swift in Sources */,
+				E954AD3F2AFE8F3800F3EA63 /* SidebarTasksView.swift in Sources */,
+				E931ED962B0C82BB000BEF56 /* QuicktaskView.swift in Sources */,
+				E985C78E25F3AD9700CB895C /* RsyncArguments.swift in Sources */,
+				E985C77F25F3AD9700CB895C /* MultipletasksPrimaryLogging.swift in Sources */,
+				E985C73E25F3AD9700CB895C /* ytcpsocket.swift in Sources */,
+				E985C77A25F3AD9700CB895C /* RsyncParametersSingleFilesArguments.swift in Sources */,
+				E985C72C25F3AD9700CB895C /* SnapshotData.swift in Sources */,
+				E985C67A25F3AD8400CB895C /* RsyncCommandView.swift in Sources */,
+				E9104F7D2C18AA0E00776625 /* SSHpath.swift in Sources */,
+				E93878C32B27355A009574CD /* AddTaskView.swift in Sources */,
+				E9B6BD352B120B840084BC8B /* NavigationLogfileView.swift in Sources */,
+				E985C66C25F3AD8400CB895C /* SnapshotsView.swift in Sources */,
+				E985C66225F3AD8400CB895C /* Sshsettings.swift in Sources */,
+				E985C73B25F3AD9700CB895C /* yudpsocket.c in Sources */,
+				E997613B271998BD007153DD /* RsyncUIlogrecords.swift in Sources */,
+				E985C79025F3AD9700CB895C /* SharedReference.swift in Sources */,
+				E9D5D196264A9E8600CCD8BB /* DeleteSnapshots.swift in Sources */,
+				E985C74425F3AD9700CB895C /* GetConfigurationData.swift in Sources */,
+				E9A2AA7D2B31D0E800916896 /* EstimationInProgressView.swift in Sources */,
+				E985C79725F3AD9700CB895C /* InterruptProcess.swift in Sources */,
+				E985C75925F3AD9700CB895C /* SynchronizeConfiguration.swift in Sources */,
+				E9826ECC2C5EBEB10085E9AD /* RsyncParameters8to14.swift in Sources */,
+				E9826ECE2C5EBEB10085E9AD /* RsyncParameters1to6.swift in Sources */,
+				E9826ECF2C5EBEB10085E9AD /* RsyncParametersLinkdestarguments.swift in Sources */,
+				E9826ED02C5EBEB10085E9AD /* RsyncParametersCompute.swift in Sources */,
+				E9826ED12C5EBEB10085E9AD /* DefaultRsyncParameters.swift in Sources */,
+				E902C10F27B836CC00A75D7A /* WriteUserConfigurationJSON.swift in Sources */,
+				E985C72725F3AD9700CB895C /* CatalogForProfile.swift in Sources */,
+				E985C66425F3AD8400CB895C /* Environmentsettings.swift in Sources */,
+				E9C1113A2BBD8DE30041CEA0 /* ConfigurationsTableDataView.swift in Sources */,
+				E985C75525F3AD9700CB895C /* LogRecords.swift in Sources */,
+				E95DD7F428EC738B007654BC /* RsyncProcessNOFilehandler.swift in Sources */,
+				E985C73325F3AD9700CB895C /* MyEnvironment.swift in Sources */,
+				E985C79225F3AD9700CB895C /* Extensions.swift in Sources */,
+				E9359B9A26691EFD00D40C43 /* ObservableAddConfigurations.swift in Sources */,
+				E98C7AB5262D662200555977 /* ReadLogRecordsJSON.swift in Sources */,
+				E985C75125F3AD9700CB895C /* DecodeConfiguration.swift in Sources */,
+				E93CC5732C4D4974000F8963 /* ImportExportCommands.swift in Sources */,
+				E985C68725F3AD8400CB895C /* EditValue.swift in Sources */,
+				E965D9B827E1C2E8005EFDBB /* UpdateLogs.swift in Sources */,
+				E99BE2342C4E677700BFE83F /* WriteExportConfigurationsJSON.swift in Sources */,
+				E985C77125F3AD9700CB895C /* ExecuteProgressDetails.swift in Sources */,
+				E902346B2C4F7AA100595967 /* ReadImportConfigurationsJSON.swift in Sources */,
+				E9AE41482AFF5AAA00F3D562 /* ExecuteNoestimatedTasksView.swift in Sources */,
+				E985C79325F3AD9700CB895C /* Rsyncversion.swift in Sources */,
+				E96AA40D2A9923F40031B1C3 /* ListofTasksAddView.swift in Sources */,
+				E985C73625F3AD9700CB895C /* SetandValidatepathforrsync.swift in Sources */,
+				E9D317D02B3C09B9000B8FC9 /* HomeCatalogsView.swift in Sources */,
+				E985C76225F3AD9700CB895C /* SshKeys.swift in Sources */,
+				E954AD412AFE8FBB00F3EA63 /* DetailsSummarizedTasksView.swift in Sources */,
+				E985C76525F3AD9700CB895C /* ExecuteMultipleTasks.swift in Sources */,
+				E9FBF40D291AFB7000AAAC40 /* SnapshotCommands.swift in Sources */,
+				E985C79125F3AD9700CB895C /* ObservableUsersetting.swift in Sources */,
+				E9712FBC2602465D003842FD /* DeleteLogsView.swift in Sources */,
+				E9BC17EA2BD8042C0049641B /* OutputRsyncVerifyView.swift in Sources */,
+				E985C75025F3AD9700CB895C /* DecodeLogRecords.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E985C5D425F3AC0800CB895C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E985C5DF25F3AC0800CB895C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E985C5DA25F3AC0800CB895C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E985C5C225F3AC0700CB895C /* RsyncUI */;
+			targetProxy = E985C5D925F3AC0800CB895C /* PBXContainerItemProxy */;
+		};
+		E985C5E525F3AC0800CB895C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E985C5C225F3AC0700CB895C /* RsyncUI */;
+			targetProxy = E985C5E425F3AC0800CB895C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E96A165C272E735F00B95D3D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E96A165D272E735F00B95D3D /* de */,
+				E96A165F272E737000B95D3D /* nb */,
+				E94F8337272E7ABA00D3924B /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E985C5EA25F3AC0800CB895C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		E985C5EB25F3AC0800CB895C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		E985C5ED25F3AC0800CB895C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RsyncUI/RsyncUI.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 101;
+				DEVELOPMENT_ASSET_PATHS = "\"RsyncUI/Preview Content\"";
+				DEVELOPMENT_TEAM = 93M47F4H9T;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = RsyncUI/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 2.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = no.blogspot.RsyncUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		E985C5EE25F3AC0800CB895C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RsyncUI/RsyncUI.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 101;
+				DEVELOPMENT_ASSET_PATHS = "\"RsyncUI/Preview Content\"";
+				DEVELOPMENT_TEAM = 93M47F4H9T;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = RsyncUI/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 2.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = no.blogspot.RsyncUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		E985C5F025F3AC0800CB895C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 93M47F4H9T;
+				INFOPLIST_FILE = RsyncUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = no.blogspot.RsyncUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RsyncUI.app/Contents/MacOS/RsyncUI";
+			};
+			name = Debug;
+		};
+		E985C5F125F3AC0800CB895C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 93M47F4H9T;
+				INFOPLIST_FILE = RsyncUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = no.blogspot.RsyncUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RsyncUI.app/Contents/MacOS/RsyncUI";
+			};
+			name = Release;
+		};
+		E985C5F325F3AC0800CB895C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 93M47F4H9T;
+				INFOPLIST_FILE = RsyncUIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = no.blogspot.RsyncUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = RsyncUI;
+			};
+			name = Debug;
+		};
+		E985C5F425F3AC0800CB895C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 93M47F4H9T;
+				INFOPLIST_FILE = RsyncUIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = no.blogspot.RsyncUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = RsyncUI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E985C5BE25F3AC0700CB895C /* Build configuration list for PBXProject "RsyncUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E985C5EA25F3AC0800CB895C /* Debug */,
+				E985C5EB25F3AC0800CB895C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E985C5EC25F3AC0800CB895C /* Build configuration list for PBXNativeTarget "RsyncUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E985C5ED25F3AC0800CB895C /* Debug */,
+				E985C5EE25F3AC0800CB895C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E985C5EF25F3AC0800CB895C /* Build configuration list for PBXNativeTarget "RsyncUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E985C5F025F3AC0800CB895C /* Debug */,
+				E985C5F125F3AC0800CB895C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E985C5F225F3AC0800CB895C /* Build configuration list for PBXNativeTarget "RsyncUIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E985C5F325F3AC0800CB895C /* Debug */,
+				E985C5F425F3AC0800CB895C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E985C5BB25F3AC0700CB895C /* Project object */;
+}
