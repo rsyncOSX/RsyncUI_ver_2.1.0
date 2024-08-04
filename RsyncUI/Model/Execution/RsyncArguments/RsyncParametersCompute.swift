@@ -49,12 +49,12 @@ public final class RsyncParametersCompute {
         guard task == DefaultRsyncParameters.synchronize.rawValue else { return }
 
         let rsyncparameters1to6 = RsyncParameters1to6(parameter1: parameter1, parameter2: parameter2, parameter3: parameter3, parameter4: parameter4, parameter5: parameter5, parameter6: parameter6, offsiteServer: offsiteServer, sshport: sshport, sshkeypathandidentityfile: sshkeypathandidentityfile, shared_sshport: sharedsshport, shared_sshkeypathandidentityfile: sharedsshkeypathandidentityfile)
-        rsyncparameters1to6.setParameters1To6(forDisplay: forDisplay, verify: verify)
-        computedarguments += rsyncparameters1to6.computedarguments
+
+        computedarguments += rsyncparameters1to6.setParameters1To6(forDisplay: forDisplay, verify: verify)
 
         let rsyncparameters8to14 = RsyncParameters8to14(parameter8: parameter8, parameter9: parameter9, parameter10: parameter10, parameter11: parameter11, parameter12: parameter12, parameter13: parameter13, parameter14: parameter14)
-        rsyncparameters8to14.setParameters8To14(dryRun: dryrun, forDisplay: forDisplay)
-        computedarguments += rsyncparameters8to14.computedarguments
+
+        computedarguments += rsyncparameters8to14.setParameters8To14(dryRun: dryrun, forDisplay: forDisplay)
 
         computedarguments.append(localCatalog)
 
@@ -73,12 +73,12 @@ public final class RsyncParametersCompute {
         guard task == DefaultRsyncParameters.syncremote.rawValue else { return }
 
         let rsyncparameters1to6 = RsyncParameters1to6(parameter1: parameter1, parameter2: parameter2, parameter3: parameter3, parameter4: parameter4, parameter5: parameter5, parameter6: parameter6, offsiteServer: offsiteServer, sshport: sshport, sshkeypathandidentityfile: sshkeypathandidentityfile, shared_sshport: sharedsshport, shared_sshkeypathandidentityfile: sharedsshkeypathandidentityfile)
-        rsyncparameters1to6.setParameters1To6(forDisplay: forDisplay, verify: verify)
-        computedarguments += rsyncparameters1to6.computedarguments
+
+        computedarguments += rsyncparameters1to6.setParameters1To6(forDisplay: forDisplay, verify: verify)
 
         let rsyncparameters8to14 = RsyncParameters8to14(parameter8: parameter8, parameter9: parameter9, parameter10: parameter10, parameter11: parameter11, parameter12: parameter12, parameter13: parameter13, parameter14: parameter14)
-        rsyncparameters8to14.setParameters8To14(dryRun: dryrun, forDisplay: forDisplay)
-        computedarguments += rsyncparameters8to14.computedarguments
+
+        computedarguments += rsyncparameters8to14.setParameters8To14(dryRun: dryrun, forDisplay: forDisplay)
 
         computedarguments.append(localCatalog)
 
@@ -97,12 +97,12 @@ public final class RsyncParametersCompute {
         guard task == DefaultRsyncParameters.snapshot.rawValue else { return }
 
         let rsyncparameters1to6 = RsyncParameters1to6(parameter1: parameter1, parameter2: parameter2, parameter3: parameter3, parameter4: parameter4, parameter5: parameter5, parameter6: parameter6, offsiteServer: offsiteServer, sshport: sshport, sshkeypathandidentityfile: sshkeypathandidentityfile, shared_sshport: sharedsshport, shared_sshkeypathandidentityfile: sharedsshkeypathandidentityfile)
-        rsyncparameters1to6.setParameters1To6(forDisplay: forDisplay, verify: verify)
-        computedarguments += rsyncparameters1to6.computedarguments
+
+        computedarguments += rsyncparameters1to6.setParameters1To6(forDisplay: forDisplay, verify: verify)
 
         let rsyncparameters8to14 = RsyncParameters8to14(parameter8: parameter8, parameter9: parameter9, parameter10: parameter10, parameter11: parameter11, parameter12: parameter12, parameter13: parameter13, parameter14: parameter14)
-        rsyncparameters8to14.setParameters8To14(dryRun: dryrun, forDisplay: forDisplay)
-        computedarguments += rsyncparameters8to14.computedarguments
+
+        computedarguments += rsyncparameters8to14.setParameters8To14(dryRun: dryrun, forDisplay: forDisplay)
 
         // Prepare linkdestparam and
         linkdestparameter(verify: verify)

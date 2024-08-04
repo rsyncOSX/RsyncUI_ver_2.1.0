@@ -48,7 +48,7 @@ final class ArgumentsSynchronize {
             case SharedReference.shared.snapshot:
                 rsyncparameterscompute.argumentsforsynchronizesnapshot(forDisplay: forDisplay, verify: false, dryrun: dryRun)
             case SharedReference.shared.syncremote:
-                return []
+                rsyncparameterscompute.argumentsforsynchronizeremote(forDisplay: forDisplay, verify: false, dryrun: dryRun)
             default:
                 break
             }

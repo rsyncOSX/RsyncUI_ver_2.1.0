@@ -23,7 +23,7 @@ public final class RsyncParameters8to14 {
 
     // Compute user selected parameters parameter8 ... parameter14
     // Brute force, check every parameter, not special elegant, but it works
-    public func setParameters8To14(dryRun: Bool, forDisplay: Bool) {
+    public func setParameters8To14(dryRun: Bool, forDisplay: Bool) -> [String] {
         stats = false
         if let parameter8, parameter8.isEmpty == false {
             appendParameter(parameter: parameter8, forDisplay: forDisplay)
@@ -61,6 +61,8 @@ public final class RsyncParameters8to14 {
                 appendParameter(parameter: DefaultRsyncParameters.stats.rawValue, forDisplay: forDisplay)
             }
         }
+
+        return computedarguments
     }
 
     private func dryrunparameter(forDisplay: Bool) {
@@ -84,7 +86,7 @@ public final class RsyncParameters8to14 {
         }
     }
 
-    init(parameter8: String?, parameter9: String?, parameter10: String?, parameter11: String?, parameter12: String?, parameter13: String?, parameter14: String?) {
+    public init(parameter8: String?, parameter9: String?, parameter10: String?, parameter11: String?, parameter12: String?, parameter13: String?, parameter14: String?) {
         self.parameter8 = parameter8
         self.parameter9 = parameter9
         self.parameter10 = parameter10

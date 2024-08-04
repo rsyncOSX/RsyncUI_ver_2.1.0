@@ -30,7 +30,7 @@ public final class RsyncParameters1to6 {
     var sharedsshport: String?
     var sharedsshkeypathandidentityfile: String?
 
-    public func setParameters1To6(forDisplay: Bool, verify: Bool) {
+    public func setParameters1To6(forDisplay: Bool, verify: Bool) -> [String] {
         if verify {
             parameter1 = DefaultRsyncParameters.verify_parameter1.rawValue
         } else {
@@ -71,6 +71,8 @@ public final class RsyncParameters1to6 {
                 }
             }
         }
+
+        return computedarguments
     }
 
     // Local params rules global settings
@@ -147,7 +149,7 @@ public final class RsyncParameters1to6 {
         if forDisplay { computedarguments.append(" ") }
     }
 
-    init(parameter1: String, parameter2: String, parameter3: String, parameter4: String, parameter5: String, parameter6: String, offsiteServer: String, sshport: String?, sshkeypathandidentityfile: String?, shared_sshport: String?, shared_sshkeypathandidentityfile: String?) {
+    public init(parameter1: String, parameter2: String, parameter3: String, parameter4: String, parameter5: String, parameter6: String, offsiteServer: String, sshport: String?, sshkeypathandidentityfile: String?, shared_sshport: String?, shared_sshkeypathandidentityfile: String?) {
         self.parameter1 = parameter1
         self.parameter2 = parameter2
         self.parameter3 = parameter3
