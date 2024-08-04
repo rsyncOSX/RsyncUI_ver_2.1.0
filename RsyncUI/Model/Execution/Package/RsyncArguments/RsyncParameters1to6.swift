@@ -59,7 +59,7 @@ final class RsyncParameters1to6 {
             // either set global or local, parameter5 = remote server
             // ssh params only apply if remote server
             if parameter5.isEmpty == false {
-                if sshport != nil || sshkeypathandidentityfile != nil {
+                if let sshport, sshport != "-1", let sshkeypathandidentityfile, sshkeypathandidentityfile.isEmpty == false {
                     sshparameterslocal(forDisplay: forDisplay)
                 } else if sharedsshkeypathandidentityfile != nil || sharedsshport != nil {
                     sshparametersglobal(forDisplay: forDisplay)
@@ -159,13 +159,6 @@ final class RsyncParameters1to6 {
         self.sshkeypathandidentityfile = sshkeypathandidentityfile
         sharedsshport = shared_sshport
         sharedsshkeypathandidentityfile = shared_sshkeypathandidentityfile
-
-        if self.sshport == "-1" {
-            self.sshport = nil
-        }
-        if self.sshkeypathandidentityfile?.isEmpty == true {
-            self.sshkeypathandidentityfile = nil
-        }
 
         computedarguments.removeAll()
     }

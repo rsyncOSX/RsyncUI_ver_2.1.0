@@ -89,19 +89,18 @@ final class RsyncProcessNOFilehandler: PropogateError {
             Logger.process.info("RsyncProcessNOFilehandler: \(launchPath, privacy: .public)")
             Logger.process.info("RsyncProcessNOFilehandler: \(arguments.joined(separator: "\n"), privacy: .public)")
         }
-
         if SharedReference.shared.monitornetworkconnection {
             Task {
                 var sshport = 22
-                if let port = config?.sshport {
+                if let port = config?.sshport, port != -1 {
                     sshport = port
                 } else if let port = SharedReference.shared.sshport {
                     sshport = port
                 }
+                Logger.process.info("RsyncProcessNOFilehandler prepare checking networkconnection port: \(sshport, privacy: .public)")
                 do {
-                    let server = config?.offsiteServer ?? ""
-                    if server.isEmpty == false {
-                        Logger.process.info("RsyncProcessNOFilehandler: checking networkconnection")
+                    if let server = config?.offsiteServer, server.isEmpty == false {
+                        Logger.process.info("RsyncProcessNOFilehandler checking networkconnection server: \(server, privacy: .public)")
                         _ = try await TCPconnections().asyncverifyTCPconnection(config?.offsiteServer ?? "", port: sshport)
                     }
 
