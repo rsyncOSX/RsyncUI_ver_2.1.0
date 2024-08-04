@@ -59,86 +59,55 @@ public final class RsyncParametersCompute {
         }
 
         computedarguments.append(localCatalog)
-        guard offsiteCatalog.isEmpty == false else { return }
-        if offsiteServer.isEmpty == false {
+
+        if offsiteServer.isEmpty == true {
             if forDisplay { computedarguments.append(" ") }
             computedarguments.append(offsiteCatalog)
             if forDisplay { computedarguments.append(" ") }
         } else {
             if forDisplay { computedarguments.append(" ") }
-            computedarguments.append(computedremoteargs)
-            if forDisplay { computedarguments.append(" ") }
-        }
-        if task == SharedReference.shared.syncremote {
-            remoteargssyncremote()
-        } else {
-            remoteargs()
-        }
-    }
-
-    public func argumentsforsynchronizeremote(forDisplay: Bool) {
-        guard offsiteCatalog.isEmpty == false else { return }
-        if forDisplay { computedarguments.append(" ") }
-        computedarguments.append(computedremoteargs)
-        if forDisplay { computedarguments.append(" ") }
-        computedarguments.append(offsiteCatalog)
-        if forDisplay { computedarguments.append(" ") }
-    }
-
-    public func argumentsforsynchronizesnapshot(forDisplay: Bool) {
-        guard linkdestparam.isEmpty == false else {
-            computedarguments.append(localCatalog)
-            return
-        }
-        computedarguments.append(linkdestparam)
-        if forDisplay { computedarguments.append(" ") }
-        computedarguments.append(localCatalog)
-        if offsiteServer.isEmpty == false {
-            if forDisplay { computedarguments.append(" ") }
-            computedarguments.append(offsiteCatalog)
-            if forDisplay { computedarguments.append(" ") }
-        } else {
-            if forDisplay { computedarguments.append(" ") }
-            computedarguments.append(computedremoteargs)
-            if forDisplay { computedarguments.append(" ") }
-        }
-    }
-
-    public func argumentsforrestore(forDisplay: Bool, tmprestore: Bool) {
-        if offsiteServer.isEmpty == false {
-            computedarguments.append(offsiteCatalog)
-            if forDisplay { computedarguments.append(" ") }
-        } else {
-            if forDisplay { computedarguments.append(" ") }
-            computedarguments.append(computedremoteargs)
-            if forDisplay { computedarguments.append(" ") }
-        }
-        if tmprestore {
-            computedarguments.append(sharedpathforrestore)
-        } else {
-            computedarguments.append(localCatalog)
-        }
-    }
-
-    func remoteargs() {
-        if offsiteServer.isEmpty == false {
-            if rsyncdaemon == 1 {
-                computedremoteargs = offsiteUsername + "@" + offsiteServer + "::" + offsiteCatalog
+            if task == SharedReference.shared.syncremote {
+                computedarguments.append(remoteargssyncremote())
             } else {
-                computedremoteargs = offsiteUsername + "@" + offsiteServer + ":" + offsiteCatalog
+                computedarguments.append(remoteargs())
             }
-            computedarguments.append(computedremoteargs)
+
+            if forDisplay { computedarguments.append(" ") }
         }
     }
 
-    func remoteargssyncremote() {
-        if offsiteServer.isEmpty == false {
-            if rsyncdaemon == 1 {
-                computedremoteargs = offsiteUsername + "@" + offsiteServer + "::" + localCatalog
+    func remoteargs() -> String {
+        if rsyncdaemon == 1 {
+            computedremoteargs = offsiteUsername + "@" + offsiteServer + "::" + offsiteCatalog
+        } else {
+            computedremoteargs = offsiteUsername + "@" + offsiteServer + ":" + offsiteCatalog
+        }
+        return computedremoteargs
+    }
+
+    func remoteargssyncremote() -> String {
+        if rsyncdaemon == 1 {
+            computedremoteargs = offsiteUsername + "@" + offsiteServer + "::" + localCatalog
+        } else {
+            computedremoteargs = offsiteUsername + "@" + offsiteServer + ":" + localCatalog
+        }
+        return computedremoteargs
+    }
+
+    // Additional parameters if snapshot
+    func linkdestparameter(verify: Bool) {
+        linkdestparam = DefaultRsyncParameters.linkdest.rawValue + offsiteCatalog + String(snapshotnum - 1)
+        if computedremoteargs.isEmpty == false {
+            if verify {
+                computedremoteargs += String(snapshotnum - 1)
             } else {
-                computedremoteargs = offsiteUsername + "@" + offsiteServer + ":" + localCatalog
+                computedremoteargs += String(snapshotnum)
             }
-            computedarguments.append(computedremoteargs)
+        }
+        if verify {
+            offsiteCatalog += String(snapshotnum - 1)
+        } else {
+            offsiteCatalog += String(snapshotnum)
         }
     }
 

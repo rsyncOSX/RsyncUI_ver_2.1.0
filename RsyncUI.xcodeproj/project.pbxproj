@@ -49,7 +49,6 @@
 		E9712FBC2602465D003842FD /* DeleteLogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9712FBB2602465D003842FD /* DeleteLogsView.swift */; };
 		E9826ECC2C5EBEB10085E9AD /* RsyncParameters8to14.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9826EC72C5EBEB10085E9AD /* RsyncParameters8to14.swift */; };
 		E9826ECE2C5EBEB10085E9AD /* RsyncParameters1to6.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9826EC62C5EBEB10085E9AD /* RsyncParameters1to6.swift */; };
-		E9826ECF2C5EBEB10085E9AD /* RsyncParametersLinkdestarguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9826EC92C5EBEB10085E9AD /* RsyncParametersLinkdestarguments.swift */; };
 		E9826ED02C5EBEB10085E9AD /* RsyncParametersCompute.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9826EC82C5EBEB10085E9AD /* RsyncParametersCompute.swift */; };
 		E9826ED12C5EBEB10085E9AD /* DefaultRsyncParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9826EC52C5EBEB10085E9AD /* DefaultRsyncParameters.swift */; };
 		E985C5C725F3AC0700CB895C /* RsyncUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C5C625F3AC0700CB895C /* RsyncUIApp.swift */; };
@@ -232,7 +231,6 @@
 		E9826EC62C5EBEB10085E9AD /* RsyncParameters1to6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsyncParameters1to6.swift; sourceTree = "<group>"; };
 		E9826EC72C5EBEB10085E9AD /* RsyncParameters8to14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsyncParameters8to14.swift; sourceTree = "<group>"; };
 		E9826EC82C5EBEB10085E9AD /* RsyncParametersCompute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsyncParametersCompute.swift; sourceTree = "<group>"; };
-		E9826EC92C5EBEB10085E9AD /* RsyncParametersLinkdestarguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsyncParametersLinkdestarguments.swift; sourceTree = "<group>"; };
 		E985C5C325F3AC0700CB895C /* RsyncUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RsyncUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E985C5C625F3AC0700CB895C /* RsyncUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsyncUIApp.swift; sourceTree = "<group>"; };
 		E985C5CD25F3AC0800CB895C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -452,7 +450,6 @@
 				E9826EC62C5EBEB10085E9AD /* RsyncParameters1to6.swift */,
 				E9826EC72C5EBEB10085E9AD /* RsyncParameters8to14.swift */,
 				E9826EC82C5EBEB10085E9AD /* RsyncParametersCompute.swift */,
-				E9826EC92C5EBEB10085E9AD /* RsyncParametersLinkdestarguments.swift */,
 			);
 			path = RsyncArguments;
 			sourceTree = "<group>";
@@ -1249,7 +1246,6 @@
 				E985C75925F3AD9700CB895C /* SynchronizeConfiguration.swift in Sources */,
 				E9826ECC2C5EBEB10085E9AD /* RsyncParameters8to14.swift in Sources */,
 				E9826ECE2C5EBEB10085E9AD /* RsyncParameters1to6.swift in Sources */,
-				E9826ECF2C5EBEB10085E9AD /* RsyncParametersLinkdestarguments.swift in Sources */,
 				E9826ED02C5EBEB10085E9AD /* RsyncParametersCompute.swift in Sources */,
 				E9826ED12C5EBEB10085E9AD /* DefaultRsyncParameters.swift in Sources */,
 				E902C10F27B836CC00A75D7A /* WriteUserConfigurationJSON.swift in Sources */,
