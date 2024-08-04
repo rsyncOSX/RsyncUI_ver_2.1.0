@@ -44,7 +44,7 @@ public final class RsyncParameters8to14 {
             let split = parameter13.components(separatedBy: "+$")
             if split.count == 2 {
                 if split[1] == "date" {
-                    appendParameter(parameter: split[0].setdatesuffixbackupstring, forDisplay: forDisplay)
+                    appendParameter(parameter: split[0].suffixbackupstring, forDisplay: forDisplay)
                 }
             } else {
                 appendParameter(parameter: parameter13, forDisplay: forDisplay)
@@ -96,6 +96,14 @@ public final class RsyncParameters8to14 {
         self.parameter14 = parameter14
 
         computedarguments.removeAll()
+    }
+}
+
+extension String {
+    var suffixbackupstring: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "-yyyy-MM-dd"
+        return self + formatter.string(from: Date())
     }
 }
 
