@@ -111,29 +111,6 @@ public final class RsyncParametersCompute {
         }
     }
 
-    /*
-      public init (task: String, parameter1: String, parameter2: String , parameter3: String ,parameter4: String, parameter5: String, parameter6: String, parameter8: String? , parameter9: String?, parameter10: String?, parameter11: String?, parameter12: String?, parameter13: String?, parameter14: String?, localCatalog: String, offsiteCatalog: String)
-      {
-          computedarguments.removeAll()
-          self.task = task
-          self.parameter1 = parameter1
-          self.parameter2 = parameter2
-          self.parameter3 = parameter3
-          self.parameter4 = parameter4
-          self.parameter5 = parameter5
-          self.parameter6 = parameter6
-          self.parameter8 = parameter8
-          self.parameter9 = parameter9
-          self.parameter10 = parameter10
-          self.parameter11 = parameter11
-          self.parameter12 = parameter12
-          self.parameter13 = parameter13
-          self.parameter14 = parameter14
-          self.localCatalog = localCatalog
-          self.offsiteCatalog = offsiteCatalog
-      }
-     */
-
     public init(task: String, parameter1: String, parameter2: String, parameter3: String, parameter4: String, parameter5: String, parameter6: String, parameter8: String?, parameter9: String?, parameter10: String?, parameter11: String?, parameter12: String?, parameter13: String?, parameter14: String?, sshport: String?, sshkeypathandidentityfile: String?, sharedsshport: String?, sharedsshkeypathandidentityfile: String?, localCatalog: String, offsiteCatalog: String, offsiteServer: String, offsiteUsername: String, sharedpathforrestore: String, snapshotnum: Int, rsyncdaemon: Int) {
         self.task = task
         self.parameter1 = parameter1
