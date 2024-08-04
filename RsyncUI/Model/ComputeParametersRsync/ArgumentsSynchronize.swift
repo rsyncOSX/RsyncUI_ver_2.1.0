@@ -42,32 +42,18 @@ final class ArgumentsSynchronize {
                                                                 sharedpathforrestore: SharedReference.shared.pathforrestore ?? "",
                                                                 snapshotnum: config.snapshotnum ?? -1,
                                                                 rsyncdaemon: config.rsyncdaemon ?? -1)
-            rsyncparameterscompute.argumentsforsynchronize(forDisplay: forDisplay, verify: false, dryrun: dryRun)
+            switch config.task {
+            case SharedReference.shared.synchronize:
+                rsyncparameterscompute.argumentsforsynchronize(forDisplay: forDisplay, verify: false, dryrun: dryRun)
+            case SharedReference.shared.snapshot:
+                rsyncparameterscompute.argumentsforsynchronizesnapshot(forDisplay: forDisplay, verify: false, dryrun: dryRun)
+            case SharedReference.shared.syncremote:
+                return []
+            default:
+                break
+            }
             return rsyncparameterscompute.computedarguments
         }
-        /*
-             localCatalog = config.localCatalog
-             if self.config?.task == SharedReference.shared.syncremote {
-                 remoteargssyncremote(config: config)
-             } else {
-                 remoteargs(config: config)
-             }
-             setParameters1To6(config: config, forDisplay: forDisplay, verify: false)
-             setParameters8To14(config: config, dryRun: dryRun, forDisplay: forDisplay)
-             switch config.task {
-             case SharedReference.shared.synchronize:
-                 argumentsforsynchronize(forDisplay: forDisplay)
-             case SharedReference.shared.snapshot:
-                 linkdestparameter(config: config, verify: false)
-                 argumentsforsynchronizesnapshot(forDisplay: forDisplay)
-             case SharedReference.shared.syncremote:
-                 argumentsforsynchronizeremote(forDisplay: forDisplay)
-             default:
-                 break
-             }
-             return arguments
-         }
-              */
         return nil
     }
 

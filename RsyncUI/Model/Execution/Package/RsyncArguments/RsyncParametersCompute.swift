@@ -46,6 +46,8 @@ public final class RsyncParametersCompute {
     var rsyncdaemon = -1
 
     public func argumentsforsynchronize(forDisplay: Bool, verify: Bool, dryrun: Bool) {
+        guard task == DefaultRsyncParameters.synchronize.rawValue else { return }
+
         let rsyncparameters1to6 = RsyncParameters1to6(parameter1: parameter1, parameter2: parameter2, parameter3: parameter3, parameter4: parameter4, parameter5: parameter5, parameter6: parameter6, offsiteServer: offsiteServer, sshport: sshport, sshkeypathandidentityfile: sshkeypathandidentityfile, shared_sshport: sharedsshport, shared_sshkeypathandidentityfile: sharedsshkeypathandidentityfile)
         rsyncparameters1to6.setParameters1To6(forDisplay: forDisplay, verify: verify)
         for i in 0 ..< rsyncparameters1to6.computedarguments.count {
@@ -66,12 +68,65 @@ public final class RsyncParametersCompute {
             if forDisplay { computedarguments.append(" ") }
         } else {
             if forDisplay { computedarguments.append(" ") }
-            if task == SharedReference.shared.syncremote {
-                computedarguments.append(remoteargssyncremote())
-            } else {
-                computedarguments.append(remoteargs())
-            }
+            computedarguments.append(remoteargs())
+            if forDisplay { computedarguments.append(" ") }
+        }
+    }
 
+    public func argumentsforsynchronizeremote(forDisplay: Bool, verify: Bool, dryrun: Bool) {
+        guard task == DefaultRsyncParameters.syncremote.rawValue else { return }
+
+        let rsyncparameters1to6 = RsyncParameters1to6(parameter1: parameter1, parameter2: parameter2, parameter3: parameter3, parameter4: parameter4, parameter5: parameter5, parameter6: parameter6, offsiteServer: offsiteServer, sshport: sshport, sshkeypathandidentityfile: sshkeypathandidentityfile, shared_sshport: sharedsshport, shared_sshkeypathandidentityfile: sharedsshkeypathandidentityfile)
+        rsyncparameters1to6.setParameters1To6(forDisplay: forDisplay, verify: verify)
+        for i in 0 ..< rsyncparameters1to6.computedarguments.count {
+            computedarguments.append(rsyncparameters1to6.computedarguments[i])
+        }
+
+        let rsyncparameters8to14 = RsyncParameters8to14(parameter8: parameter8, parameter9: parameter9, parameter10: parameter10, parameter11: parameter11, parameter12: parameter12, parameter13: parameter13, parameter14: parameter14)
+        rsyncparameters8to14.setParameters8To14(dryRun: dryrun, forDisplay: forDisplay)
+        for i in 0 ..< rsyncparameters8to14.computedarguments.count {
+            computedarguments.append(rsyncparameters8to14.computedarguments[i])
+        }
+
+        computedarguments.append(localCatalog)
+
+        if offsiteServer.isEmpty == true {
+            if forDisplay { computedarguments.append(" ") }
+            computedarguments.append(offsiteCatalog)
+            if forDisplay { computedarguments.append(" ") }
+        } else {
+            if forDisplay { computedarguments.append(" ") }
+            computedarguments.append(remoteargssyncremote())
+            if forDisplay { computedarguments.append(" ") }
+        }
+    }
+
+    public func argumentsforsynchronizesnapshot(forDisplay: Bool, verify: Bool, dryrun: Bool) {
+        guard task == DefaultRsyncParameters.snapshot.rawValue else { return }
+
+        let rsyncparameters1to6 = RsyncParameters1to6(parameter1: parameter1, parameter2: parameter2, parameter3: parameter3, parameter4: parameter4, parameter5: parameter5, parameter6: parameter6, offsiteServer: offsiteServer, sshport: sshport, sshkeypathandidentityfile: sshkeypathandidentityfile, shared_sshport: sharedsshport, shared_sshkeypathandidentityfile: sharedsshkeypathandidentityfile)
+        rsyncparameters1to6.setParameters1To6(forDisplay: forDisplay, verify: verify)
+        for i in 0 ..< rsyncparameters1to6.computedarguments.count {
+            computedarguments.append(rsyncparameters1to6.computedarguments[i])
+        }
+
+        let rsyncparameters8to14 = RsyncParameters8to14(parameter8: parameter8, parameter9: parameter9, parameter10: parameter10, parameter11: parameter11, parameter12: parameter12, parameter13: parameter13, parameter14: parameter14)
+        rsyncparameters8to14.setParameters8To14(dryRun: dryrun, forDisplay: forDisplay)
+        for i in 0 ..< rsyncparameters8to14.computedarguments.count {
+            computedarguments.append(rsyncparameters8to14.computedarguments[i])
+        }
+
+        // Prepare linkdestparam and
+        linkdestparameter(verify: verify)
+        computedarguments.append(linkdestparam)
+
+        if offsiteServer.isEmpty == true {
+            if forDisplay { computedarguments.append(" ") }
+            computedarguments.append(offsiteCatalog)
+            if forDisplay { computedarguments.append(" ") }
+        } else {
+            if forDisplay { computedarguments.append(" ") }
+            computedarguments.append(remoteargs())
             if forDisplay { computedarguments.append(" ") }
         }
     }
@@ -142,3 +197,47 @@ public final class RsyncParametersCompute {
 }
 
 // swiftlint:enable line_length
+
+/*
+ func argumentsforsynchronize(forDisplay: Bool) {
+     arguments?.append(localCatalog ?? "")
+     guard offsiteCatalog != nil else { return }
+     if (offsiteServer ?? "").isEmpty {
+         if forDisplay { arguments?.append(" ") }
+         arguments?.append(offsiteCatalog!)
+         if forDisplay { arguments?.append(" ") }
+     } else {
+         if forDisplay { arguments?.append(" ") }
+         arguments?.append(remoteargs ?? "")
+         if forDisplay { arguments?.append(" ") }
+     }
+ }
+
+ func argumentsforsynchronizeremote(forDisplay: Bool) {
+     guard offsiteCatalog != nil else { return }
+     if forDisplay { arguments?.append(" ") }
+     arguments?.append(remoteargs ?? "")
+     if forDisplay { arguments?.append(" ") }
+     arguments?.append(offsiteCatalog ?? "")
+     if forDisplay { arguments?.append(" ") }
+ }
+
+ func argumentsforsynchronizesnapshot(forDisplay: Bool) {
+     guard linkdestparam != nil else {
+         arguments?.append(localCatalog ?? "")
+         return
+     }
+     arguments?.append(linkdestparam ?? "")
+     if forDisplay { arguments?.append(" ") }
+     arguments?.append(localCatalog ?? "")
+     if (offsiteServer ?? "").isEmpty {
+         if forDisplay { arguments?.append(" ") }
+         arguments?.append(offsiteCatalog ?? "")
+         if forDisplay { arguments?.append(" ") }
+     } else {
+         if forDisplay { arguments?.append(" ") }
+         arguments?.append(remoteargs ?? "")
+         if forDisplay { arguments?.append(" ") }
+     }
+ }
+ */
