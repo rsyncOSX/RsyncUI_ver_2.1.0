@@ -50,15 +50,11 @@ public final class RsyncParametersCompute {
 
         let rsyncparameters1to6 = RsyncParameters1to6(parameter1: parameter1, parameter2: parameter2, parameter3: parameter3, parameter4: parameter4, parameter5: parameter5, parameter6: parameter6, offsiteServer: offsiteServer, sshport: sshport, sshkeypathandidentityfile: sshkeypathandidentityfile, shared_sshport: sharedsshport, shared_sshkeypathandidentityfile: sharedsshkeypathandidentityfile)
         rsyncparameters1to6.setParameters1To6(forDisplay: forDisplay, verify: verify)
-        for i in 0 ..< rsyncparameters1to6.computedarguments.count {
-            computedarguments.append(rsyncparameters1to6.computedarguments[i])
-        }
+        computedarguments += rsyncparameters1to6.computedarguments
 
         let rsyncparameters8to14 = RsyncParameters8to14(parameter8: parameter8, parameter9: parameter9, parameter10: parameter10, parameter11: parameter11, parameter12: parameter12, parameter13: parameter13, parameter14: parameter14)
         rsyncparameters8to14.setParameters8To14(dryRun: dryrun, forDisplay: forDisplay)
-        for i in 0 ..< rsyncparameters8to14.computedarguments.count {
-            computedarguments.append(rsyncparameters8to14.computedarguments[i])
-        }
+        computedarguments += rsyncparameters8to14.computedarguments
 
         computedarguments.append(localCatalog)
 
@@ -78,15 +74,11 @@ public final class RsyncParametersCompute {
 
         let rsyncparameters1to6 = RsyncParameters1to6(parameter1: parameter1, parameter2: parameter2, parameter3: parameter3, parameter4: parameter4, parameter5: parameter5, parameter6: parameter6, offsiteServer: offsiteServer, sshport: sshport, sshkeypathandidentityfile: sshkeypathandidentityfile, shared_sshport: sharedsshport, shared_sshkeypathandidentityfile: sharedsshkeypathandidentityfile)
         rsyncparameters1to6.setParameters1To6(forDisplay: forDisplay, verify: verify)
-        for i in 0 ..< rsyncparameters1to6.computedarguments.count {
-            computedarguments.append(rsyncparameters1to6.computedarguments[i])
-        }
+        computedarguments += rsyncparameters1to6.computedarguments
 
         let rsyncparameters8to14 = RsyncParameters8to14(parameter8: parameter8, parameter9: parameter9, parameter10: parameter10, parameter11: parameter11, parameter12: parameter12, parameter13: parameter13, parameter14: parameter14)
         rsyncparameters8to14.setParameters8To14(dryRun: dryrun, forDisplay: forDisplay)
-        for i in 0 ..< rsyncparameters8to14.computedarguments.count {
-            computedarguments.append(rsyncparameters8to14.computedarguments[i])
-        }
+        computedarguments += rsyncparameters8to14.computedarguments
 
         computedarguments.append(localCatalog)
 
@@ -106,15 +98,11 @@ public final class RsyncParametersCompute {
 
         let rsyncparameters1to6 = RsyncParameters1to6(parameter1: parameter1, parameter2: parameter2, parameter3: parameter3, parameter4: parameter4, parameter5: parameter5, parameter6: parameter6, offsiteServer: offsiteServer, sshport: sshport, sshkeypathandidentityfile: sshkeypathandidentityfile, shared_sshport: sharedsshport, shared_sshkeypathandidentityfile: sharedsshkeypathandidentityfile)
         rsyncparameters1to6.setParameters1To6(forDisplay: forDisplay, verify: verify)
-        for i in 0 ..< rsyncparameters1to6.computedarguments.count {
-            computedarguments.append(rsyncparameters1to6.computedarguments[i])
-        }
+        computedarguments += rsyncparameters1to6.computedarguments
 
         let rsyncparameters8to14 = RsyncParameters8to14(parameter8: parameter8, parameter9: parameter9, parameter10: parameter10, parameter11: parameter11, parameter12: parameter12, parameter13: parameter13, parameter14: parameter14)
         rsyncparameters8to14.setParameters8To14(dryRun: dryrun, forDisplay: forDisplay)
-        for i in 0 ..< rsyncparameters8to14.computedarguments.count {
-            computedarguments.append(rsyncparameters8to14.computedarguments[i])
-        }
+        computedarguments += rsyncparameters8to14.computedarguments
 
         // Prepare linkdestparam and
         linkdestparameter(verify: verify)
