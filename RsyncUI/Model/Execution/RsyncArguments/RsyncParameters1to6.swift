@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class RsyncParameters1to6 {
+public final class RsyncParameters1to6 {
     // -e "ssh -i ~/.ssh/id_myserver -p 22"
     // -e "ssh -i ~/sshkeypath/sshidentityfile -p portnumber"
     // default is
@@ -30,7 +30,7 @@ final class RsyncParameters1to6 {
     var sharedsshport: String?
     var sharedsshkeypathandidentityfile: String?
 
-    func setParameters1To6(forDisplay: Bool, verify: Bool) {
+    public func setParameters1To6(forDisplay: Bool, verify: Bool) {
         if verify {
             parameter1 = DefaultRsyncParameters.verify_parameter1.rawValue
         } else {

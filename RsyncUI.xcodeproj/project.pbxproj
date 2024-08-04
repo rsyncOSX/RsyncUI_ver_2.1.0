@@ -435,14 +435,6 @@
 			path = RsyncParameters;
 			sourceTree = "<group>";
 		};
-		E9826EC42C5EBE860085E9AD /* Package */ = {
-			isa = PBXGroup;
-			children = (
-				E9826ECB2C5EBEB10085E9AD /* RsyncArguments */,
-			);
-			path = Package;
-			sourceTree = "<group>";
-		};
 		E9826ECB2C5EBEB10085E9AD /* RsyncArguments */ = {
 			isa = PBXGroup;
 			children = (
@@ -756,7 +748,7 @@
 		E985C6DE25F3AD9600CB895C /* Execution */ = {
 			isa = PBXGroup;
 			children = (
-				E9826EC42C5EBE860085E9AD /* Package */,
+				E9826ECB2C5EBEB10085E9AD /* RsyncArguments */,
 				E985C6E225F3AD9600CB895C /* ExecuteMultipleTasks */,
 				E985C6EA25F3AD9600CB895C /* Estimation */,
 				E985C6EF25F3AD9600CB895C /* ProgressCounts */,

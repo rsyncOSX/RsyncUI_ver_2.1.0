@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class RsyncParameters8to14 {
+public final class RsyncParameters8to14 {
     var computedarguments = [String]()
 
     var parameter8: String?
@@ -23,7 +23,7 @@ final class RsyncParameters8to14 {
 
     // Compute user selected parameters parameter8 ... parameter14
     // Brute force, check every parameter, not special elegant, but it works
-    func setParameters8To14(dryRun: Bool, forDisplay: Bool) {
+    public func setParameters8To14(dryRun: Bool, forDisplay: Bool) {
         stats = false
         if let parameter8, parameter8.isEmpty == false {
             appendParameter(parameter: parameter8, forDisplay: forDisplay)
