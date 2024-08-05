@@ -57,7 +57,6 @@ final class ArgumentsSynchronize {
     }
 
     init(config: SynchronizeConfiguration?) {
-        // super.init()
         self.config = config
     }
 }
