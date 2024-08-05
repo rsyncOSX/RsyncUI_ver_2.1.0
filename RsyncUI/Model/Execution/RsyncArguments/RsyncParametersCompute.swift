@@ -80,17 +80,15 @@ public final class RsyncParametersCompute {
 
         computedarguments += rsyncparameters8to14.setParameters8To14(dryRun: dryrun, forDisplay: forDisplay)
 
-        computedarguments.append(localCatalog)
+        guard offsiteServer.isEmpty == false else { return }
 
-        if offsiteServer.isEmpty == true {
-            if forDisplay { computedarguments.append(" ") }
-            computedarguments.append(offsiteCatalog)
-            if forDisplay { computedarguments.append(" ") }
-        } else {
-            if forDisplay { computedarguments.append(" ") }
-            computedarguments.append(remoteargssyncremote())
-            if forDisplay { computedarguments.append(" ") }
-        }
+        if forDisplay { computedarguments.append(" ") }
+        computedarguments.append(remoteargssyncremote())
+        if forDisplay { computedarguments.append(" ") }
+
+        if forDisplay { computedarguments.append(" ") }
+        computedarguments.append(offsiteCatalog)
+        if forDisplay { computedarguments.append(" ") }
     }
 
     public func argumentsforsynchronizesnapshot(forDisplay: Bool, verify: Bool, dryrun: Bool) {
