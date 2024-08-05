@@ -4,7 +4,7 @@
 //
 //  Created by Thomas Evensen on 02/08/2024.
 //
-// swiftlint:disable line_length cyclomatic_complexity
+// swiftlint:disable cyclomatic_complexity
 
 import Foundation
 
@@ -149,7 +149,18 @@ public final class RsyncParameters1to6 {
         if forDisplay { computedarguments.append(" ") }
     }
 
-    public init(parameter1: String, parameter2: String, parameter3: String, parameter4: String, parameter5: String, parameter6: String, offsiteServer: String, sshport: String?, sshkeypathandidentityfile: String?, shared_sshport: String?, shared_sshkeypathandidentityfile: String?) {
+    public init(parameter1: String,
+                parameter2: String,
+                parameter3: String,
+                parameter4: String,
+                parameter5: String,
+                parameter6: String,
+                offsiteServer: String,
+                sshport: String?,
+                sshkeypathandidentityfile: String?,
+                sharedsshport: String?,
+                sharedsshkeypathandidentityfile: String?)
+    {
         self.parameter1 = parameter1
         self.parameter2 = parameter2
         self.parameter3 = parameter3
@@ -159,11 +170,11 @@ public final class RsyncParameters1to6 {
         self.offsiteServer = offsiteServer
         self.sshport = sshport
         self.sshkeypathandidentityfile = sshkeypathandidentityfile
-        sharedsshport = shared_sshport
-        sharedsshkeypathandidentityfile = shared_sshkeypathandidentityfile
+        self.sharedsshport = sharedsshport
+        self.sharedsshkeypathandidentityfile = sharedsshkeypathandidentityfile
 
         computedarguments.removeAll()
     }
 }
 
-// swiftlint:enable line_length cyclomatic_complexity
+// swiftlint:enable cyclomatic_complexity

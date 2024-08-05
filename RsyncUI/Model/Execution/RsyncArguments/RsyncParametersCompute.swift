@@ -4,7 +4,6 @@
 //
 //  Created by Thomas Evensen on 03/08/2024.
 //
-// swiftlint:disable line_length
 
 import Foundation
 
@@ -45,16 +44,36 @@ public final class RsyncParametersCompute {
     var snapshotnum = -1
     var rsyncdaemon = -1
 
-    public func argumentsforsynchronize(forDisplay: Bool, verify: Bool, dryrun: Bool) {
-        guard task == DefaultRsyncParameters.synchronize.rawValue else { return }
-
-        let rsyncparameters1to6 = RsyncParameters1to6(parameter1: parameter1, parameter2: parameter2, parameter3: parameter3, parameter4: parameter4, parameter5: parameter5, parameter6: parameter6, offsiteServer: offsiteServer, sshport: sshport, sshkeypathandidentityfile: sshkeypathandidentityfile, shared_sshport: sharedsshport, shared_sshkeypathandidentityfile: sharedsshkeypathandidentityfile)
+    private func initialise_rsyncparameters(forDisplay: Bool, verify: Bool, dryrun: Bool) {
+        let rsyncparameters1to6 = RsyncParameters1to6(parameter1: parameter1,
+                                                      parameter2: parameter2,
+                                                      parameter3: parameter3,
+                                                      parameter4: parameter4,
+                                                      parameter5: parameter5,
+                                                      parameter6: parameter6,
+                                                      offsiteServer: offsiteServer,
+                                                      sshport: sshport,
+                                                      sshkeypathandidentityfile: sshkeypathandidentityfile,
+                                                      sharedsshport: sharedsshport,
+                                                      sharedsshkeypathandidentityfile: sharedsshkeypathandidentityfile)
 
         computedarguments += rsyncparameters1to6.setParameters1To6(forDisplay: forDisplay, verify: verify)
 
-        let rsyncparameters8to14 = RsyncParameters8to14(parameter8: parameter8, parameter9: parameter9, parameter10: parameter10, parameter11: parameter11, parameter12: parameter12, parameter13: parameter13, parameter14: parameter14)
+        let rsyncparameters8to14 = RsyncParameters8to14(parameter8: parameter8,
+                                                        parameter9: parameter9,
+                                                        parameter10: parameter10,
+                                                        parameter11: parameter11,
+                                                        parameter12: parameter12,
+                                                        parameter13: parameter13,
+                                                        parameter14: parameter14)
 
         computedarguments += rsyncparameters8to14.setParameters8To14(dryRun: dryrun, forDisplay: forDisplay)
+    }
+
+    public func argumentsforsynchronize(forDisplay: Bool, verify: Bool, dryrun: Bool) {
+        guard task == DefaultRsyncParameters.synchronize.rawValue else { return }
+
+        initialise_rsyncparameters(forDisplay: forDisplay, verify: verify, dryrun: dryrun)
 
         computedarguments.append(localCatalog)
 
@@ -72,15 +91,9 @@ public final class RsyncParametersCompute {
     public func argumentsforsynchronizeremote(forDisplay: Bool, verify: Bool, dryrun: Bool) {
         guard task == DefaultRsyncParameters.syncremote.rawValue else { return }
 
-        let rsyncparameters1to6 = RsyncParameters1to6(parameter1: parameter1, parameter2: parameter2, parameter3: parameter3, parameter4: parameter4, parameter5: parameter5, parameter6: parameter6, offsiteServer: offsiteServer, sshport: sshport, sshkeypathandidentityfile: sshkeypathandidentityfile, shared_sshport: sharedsshport, shared_sshkeypathandidentityfile: sharedsshkeypathandidentityfile)
-
-        computedarguments += rsyncparameters1to6.setParameters1To6(forDisplay: forDisplay, verify: verify)
-
-        let rsyncparameters8to14 = RsyncParameters8to14(parameter8: parameter8, parameter9: parameter9, parameter10: parameter10, parameter11: parameter11, parameter12: parameter12, parameter13: parameter13, parameter14: parameter14)
-
-        computedarguments += rsyncparameters8to14.setParameters8To14(dryRun: dryrun, forDisplay: forDisplay)
-
         guard offsiteServer.isEmpty == false else { return }
+
+        initialise_rsyncparameters(forDisplay: forDisplay, verify: verify, dryrun: dryrun)
 
         if forDisplay { computedarguments.append(" ") }
         computedarguments.append(remoteargssyncremote())
@@ -94,13 +107,7 @@ public final class RsyncParametersCompute {
     public func argumentsforsynchronizesnapshot(forDisplay: Bool, verify: Bool, dryrun: Bool) {
         guard task == DefaultRsyncParameters.snapshot.rawValue else { return }
 
-        let rsyncparameters1to6 = RsyncParameters1to6(parameter1: parameter1, parameter2: parameter2, parameter3: parameter3, parameter4: parameter4, parameter5: parameter5, parameter6: parameter6, offsiteServer: offsiteServer, sshport: sshport, sshkeypathandidentityfile: sshkeypathandidentityfile, shared_sshport: sharedsshport, shared_sshkeypathandidentityfile: sharedsshkeypathandidentityfile)
-
-        computedarguments += rsyncparameters1to6.setParameters1To6(forDisplay: forDisplay, verify: verify)
-
-        let rsyncparameters8to14 = RsyncParameters8to14(parameter8: parameter8, parameter9: parameter9, parameter10: parameter10, parameter11: parameter11, parameter12: parameter12, parameter13: parameter13, parameter14: parameter14)
-
-        computedarguments += rsyncparameters8to14.setParameters8To14(dryRun: dryrun, forDisplay: forDisplay)
+        initialise_rsyncparameters(forDisplay: forDisplay, verify: verify, dryrun: dryrun)
 
         // Prepare linkdestparam and
         linkdestparameter(verify: verify)
@@ -117,7 +124,7 @@ public final class RsyncParametersCompute {
         }
     }
 
-    func remoteargs() -> String {
+    private func remoteargs() -> String {
         if rsyncdaemon == 1 {
             computedremoteargs = offsiteUsername + "@" + offsiteServer + "::" + offsiteCatalog
         } else {
@@ -126,7 +133,7 @@ public final class RsyncParametersCompute {
         return computedremoteargs
     }
 
-    func remoteargssyncremote() -> String {
+    private func remoteargssyncremote() -> String {
         if rsyncdaemon == 1 {
             computedremoteargs = offsiteUsername + "@" + offsiteServer + "::" + localCatalog
         } else {
@@ -136,7 +143,7 @@ public final class RsyncParametersCompute {
     }
 
     // Additional parameters if snapshot
-    func linkdestparameter(verify: Bool) {
+    private func linkdestparameter(verify: Bool) {
         linkdestparam = DefaultRsyncParameters.linkdest.rawValue + offsiteCatalog + String(snapshotnum - 1)
         if computedremoteargs.isEmpty == false {
             if verify {
@@ -152,7 +159,32 @@ public final class RsyncParametersCompute {
         }
     }
 
-    public init(task: String, parameter1: String, parameter2: String, parameter3: String, parameter4: String, parameter5: String, parameter6: String, parameter8: String?, parameter9: String?, parameter10: String?, parameter11: String?, parameter12: String?, parameter13: String?, parameter14: String?, sshport: String?, sshkeypathandidentityfile: String?, sharedsshport: String?, sharedsshkeypathandidentityfile: String?, localCatalog: String, offsiteCatalog: String, offsiteServer: String, offsiteUsername: String, sharedpathforrestore: String, snapshotnum: Int, rsyncdaemon: Int) {
+    public init(task: String,
+                parameter1: String,
+                parameter2: String,
+                parameter3: String,
+                parameter4: String,
+                parameter5: String,
+                parameter6: String,
+                parameter8: String?,
+                parameter9: String?,
+                parameter10: String?,
+                parameter11: String?,
+                parameter12: String?,
+                parameter13: String?,
+                parameter14: String?,
+                sshport: String?,
+                sshkeypathandidentityfile: String?,
+                sharedsshport: String?,
+                sharedsshkeypathandidentityfile: String?,
+                localCatalog: String,
+                offsiteCatalog: String,
+                offsiteServer: String,
+                offsiteUsername: String,
+                sharedpathforrestore: String,
+                snapshotnum: Int,
+                rsyncdaemon: Int)
+    {
         self.task = task
         self.parameter1 = parameter1
         self.parameter2 = parameter2
@@ -181,5 +213,3 @@ public final class RsyncParametersCompute {
         computedarguments.removeAll()
     }
 }
-
-// swiftlint:enable line_length

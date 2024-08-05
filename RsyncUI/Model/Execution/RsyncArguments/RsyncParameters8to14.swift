@@ -4,7 +4,7 @@
 //
 //  Created by Thomas Evensen on 03/08/2024.
 //
-// swiftlint:disable line_length cyclomatic_complexity
+// swiftlint:disable cyclomatic_complexity
 
 import Foundation
 
@@ -86,7 +86,14 @@ public final class RsyncParameters8to14 {
         }
     }
 
-    public init(parameter8: String?, parameter9: String?, parameter10: String?, parameter11: String?, parameter12: String?, parameter13: String?, parameter14: String?) {
+    public init(parameter8: String?,
+                parameter9: String?,
+                parameter10: String?,
+                parameter11: String?,
+                parameter12: String?,
+                parameter13: String?,
+                parameter14: String?)
+    {
         self.parameter8 = parameter8
         self.parameter9 = parameter9
         self.parameter10 = parameter10
@@ -134,4 +141,4 @@ extension String {
  }
  */
 
-// swiftlint:enable line_length cyclomatic_complexity
+// swiftlint:enable cyclomatic_complexity
