@@ -47,10 +47,6 @@
 		E96A165E272E735F00B95D3D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E96A165C272E735F00B95D3D /* Localizable.strings */; };
 		E96AA40D2A9923F40031B1C3 /* ListofTasksAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96AA40C2A9923F40031B1C3 /* ListofTasksAddView.swift */; };
 		E9712FBC2602465D003842FD /* DeleteLogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9712FBB2602465D003842FD /* DeleteLogsView.swift */; };
-		E9826ECC2C5EBEB10085E9AD /* RsyncParameters8to14.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9826EC72C5EBEB10085E9AD /* RsyncParameters8to14.swift */; };
-		E9826ECE2C5EBEB10085E9AD /* RsyncParameters1to6.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9826EC62C5EBEB10085E9AD /* RsyncParameters1to6.swift */; };
-		E9826ED02C5EBEB10085E9AD /* RsyncParametersCompute.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9826EC82C5EBEB10085E9AD /* RsyncParametersCompute.swift */; };
-		E9826ED12C5EBEB10085E9AD /* DefaultRsyncParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9826EC52C5EBEB10085E9AD /* DefaultRsyncParameters.swift */; };
 		E985C5C725F3AC0700CB895C /* RsyncUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C5C625F3AC0700CB895C /* RsyncUIApp.swift */; };
 		E985C5CE25F3AC0800CB895C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E985C5CD25F3AC0800CB895C /* Preview Assets.xcassets */; };
 		E985C65825F3AD8400CB895C /* SidebarSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985C60F25F3AD8400CB895C /* SidebarSettingsView.swift */; };
@@ -146,6 +142,7 @@
 		E9B6B3E32AFFDE7500E12EB2 /* ListofTasksMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B6B3E22AFFDE7500E12EB2 /* ListofTasksMainView.swift */; };
 		E9B6BD352B120B840084BC8B /* NavigationLogfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B6BD342B120B840084BC8B /* NavigationLogfileView.swift */; };
 		E9B6DE0C2647AF810093A6D2 /* ConfirmDeleteProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B6DE0B2647AF810093A6D2 /* ConfirmDeleteProfileView.swift */; };
+		E9BAB99D2C60A611008A1707 /* RsyncArguments in Frameworks */ = {isa = PBXBuildFile; productRef = E9BAB99C2C60A611008A1707 /* RsyncArguments */; };
 		E9BB4F562903C00A00FEEA0A /* ExecuteTasksNOEstimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BB4F552903C00A00FEEA0A /* ExecuteTasksNOEstimation.swift */; };
 		E9BC17EA2BD8042C0049641B /* OutputRsyncVerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC17E92BD8042C0049641B /* OutputRsyncVerifyView.swift */; };
 		E9BD14BD2642FDC200E29347 /* TrimOutputForRestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD14BC2642FDC200E29347 /* TrimOutputForRestore.swift */; };
@@ -227,10 +224,6 @@
 		E96A165F272E737000B95D3D /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E96AA40C2A9923F40031B1C3 /* ListofTasksAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListofTasksAddView.swift; sourceTree = "<group>"; };
 		E9712FBB2602465D003842FD /* DeleteLogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteLogsView.swift; sourceTree = "<group>"; };
-		E9826EC52C5EBEB10085E9AD /* DefaultRsyncParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRsyncParameters.swift; sourceTree = "<group>"; };
-		E9826EC62C5EBEB10085E9AD /* RsyncParameters1to6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsyncParameters1to6.swift; sourceTree = "<group>"; };
-		E9826EC72C5EBEB10085E9AD /* RsyncParameters8to14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsyncParameters8to14.swift; sourceTree = "<group>"; };
-		E9826EC82C5EBEB10085E9AD /* RsyncParametersCompute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsyncParametersCompute.swift; sourceTree = "<group>"; };
 		E985C5C325F3AC0700CB895C /* RsyncUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RsyncUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E985C5C625F3AC0700CB895C /* RsyncUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsyncUIApp.swift; sourceTree = "<group>"; };
 		E985C5CD25F3AC0800CB895C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -359,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E987648D2ADAD938001B4B7E /* Metal.framework in Frameworks */,
+				E9BAB99D2C60A611008A1707 /* RsyncArguments in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,17 +427,6 @@
 				E95EDC7E26063CAA000018DE /* EditRsyncParameter.swift */,
 			);
 			path = RsyncParameters;
-			sourceTree = "<group>";
-		};
-		E9826ECB2C5EBEB10085E9AD /* RsyncArguments */ = {
-			isa = PBXGroup;
-			children = (
-				E9826EC52C5EBEB10085E9AD /* DefaultRsyncParameters.swift */,
-				E9826EC62C5EBEB10085E9AD /* RsyncParameters1to6.swift */,
-				E9826EC72C5EBEB10085E9AD /* RsyncParameters8to14.swift */,
-				E9826EC82C5EBEB10085E9AD /* RsyncParametersCompute.swift */,
-			);
-			path = RsyncArguments;
 			sourceTree = "<group>";
 		};
 		E985C5BA25F3AC0700CB895C = {
@@ -748,7 +731,6 @@
 		E985C6DE25F3AD9600CB895C /* Execution */ = {
 			isa = PBXGroup;
 			children = (
-				E9826ECB2C5EBEB10085E9AD /* RsyncArguments */,
 				E985C6E225F3AD9600CB895C /* ExecuteMultipleTasks */,
 				E985C6EA25F3AD9600CB895C /* Estimation */,
 				E985C6EF25F3AD9600CB895C /* ProgressCounts */,
@@ -975,6 +957,7 @@
 			);
 			name = RsyncUI;
 			packageProductDependencies = (
+				E9BAB99C2C60A611008A1707 /* RsyncArguments */,
 			);
 			productName = RsyncUI;
 			productReference = E985C5C325F3AC0700CB895C /* RsyncUI.app */;
@@ -1050,6 +1033,7 @@
 			);
 			mainGroup = E985C5BA25F3AC0700CB895C;
 			packageReferences = (
+				E9BAB99B2C60A611008A1707 /* XCRemoteSwiftPackageReference "RsyncArguments" */,
 			);
 			productRefGroup = E985C5C425F3AC0700CB895C /* Products */;
 			projectDirPath = "";
@@ -1236,10 +1220,6 @@
 				E9A2AA7D2B31D0E800916896 /* EstimationInProgressView.swift in Sources */,
 				E985C79725F3AD9700CB895C /* InterruptProcess.swift in Sources */,
 				E985C75925F3AD9700CB895C /* SynchronizeConfiguration.swift in Sources */,
-				E9826ECC2C5EBEB10085E9AD /* RsyncParameters8to14.swift in Sources */,
-				E9826ECE2C5EBEB10085E9AD /* RsyncParameters1to6.swift in Sources */,
-				E9826ED02C5EBEB10085E9AD /* RsyncParametersCompute.swift in Sources */,
-				E9826ED12C5EBEB10085E9AD /* DefaultRsyncParameters.swift in Sources */,
 				E902C10F27B836CC00A75D7A /* WriteUserConfigurationJSON.swift in Sources */,
 				E985C72725F3AD9700CB895C /* CatalogForProfile.swift in Sources */,
 				E985C66425F3AD8400CB895C /* Environmentsettings.swift in Sources */,
@@ -1622,6 +1602,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E9BAB99B2C60A611008A1707 /* XCRemoteSwiftPackageReference "RsyncArguments" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rsyncOSX/RsyncArguments.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E9BAB99C2C60A611008A1707 /* RsyncArguments */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9BAB99B2C60A611008A1707 /* XCRemoteSwiftPackageReference "RsyncArguments" */;
+			productName = RsyncArguments;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E985C5BB25F3AC0700CB895C /* Project object */;
 }

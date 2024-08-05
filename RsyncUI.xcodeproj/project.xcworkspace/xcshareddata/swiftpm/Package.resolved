@@ -1,0 +1,15 @@
+{
+  "originHash" : "c044e7ddc753aaf75f009c53c8cdd784828f422fd576cd2f1c2fdbef331d8eaa",
+  "pins" : [
+    {
+      "identity" : "rsyncarguments",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rsyncOSX/RsyncArguments.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "98de5482e557328e60fd7ff6c4df0bfc995c0d58"
+      }
+    }
+  ],
+  "version" : 3
+}

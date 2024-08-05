@@ -8,12 +8,11 @@
 // swiftlint:disable line_length
 
 import Foundation
+import RsyncArguments
 
 @MainActor
 final class ArgumentsSynchronize {
     var config: SynchronizeConfiguration?
-
-    var rsyncparameterscompute: RsyncParametersCompute?
 
     func argumentssynchronize(dryRun: Bool, forDisplay: Bool) -> [String]? {
         if let config {
