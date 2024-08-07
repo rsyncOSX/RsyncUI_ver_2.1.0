@@ -36,11 +36,11 @@ final class RestorefilesArguments {
                 self.arguments = arguments.getArguments()
             case .rsyncfilelistings:
                 let arguments = RemoteFileListArguments(config: config,
-                                                        recursive: true)
+                                                        recursive: true, filelisttask: task)
                 self.arguments = arguments.remotefilelistarguments()
             case .snapshotcatalogsonly:
                 let arguments = RemoteFileListArguments(config: config,
-                                                        recursive: false)
+                                                        recursive: false, filelisttask: task)
                 self.arguments = arguments.remotefilelistarguments()
             }
         }

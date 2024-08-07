@@ -112,7 +112,6 @@ struct RestoreTableView: View {
                 }
             }
             .toolbar(content: {
-                
                 ToolbarItem {
                     if restore.selectedconfig?.task != SharedReference.shared.syncremote, restore.selectedconfig?.offsiteServer.isEmpty == false {
                         Button {
@@ -123,13 +122,13 @@ struct RestoreTableView: View {
                         .help("Get list of files for restore")
                     }
                 }
-                
+
                 ToolbarItem {
                     if restore.selectedconfig?.task == SharedReference.shared.snapshot {
                         snapshotcatalogpicker
                     }
                 }
-                
+
                 ToolbarItem {
                     Button {
                         executerestore()

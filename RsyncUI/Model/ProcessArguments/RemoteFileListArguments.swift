@@ -13,6 +13,7 @@ import RsyncArguments
 final class RemoteFileListArguments {
     var config: SynchronizeConfiguration?
     var recursive: Bool = false
+    var filelisttask: Enumrestorefiles
 
     func remotefilelistarguments() -> [String]? {
         if let config {
@@ -41,24 +42,23 @@ final class RemoteFileListArguments {
                                                                 sharedpathforrestore: SharedReference.shared.pathforrestore ?? "",
                                                                 snapshotnum: config.snapshotnum ?? -1,
                                                                 rsyncdaemon: config.rsyncdaemon ?? -1)
-            switch config.task {
-            case SharedReference.shared.synchronize:
-                rsyncparametersrestore.remoteargumentsfilelist(forDisplay: false, verify: false, dryrun: false, recursive: true)
-            case SharedReference.shared.snapshot:
-                rsyncparametersrestore.remoteargumentssnapshotfilelist(forDisplay: false, verify: false, dryrun: false, recursive: recursive)
-            case SharedReference.shared.syncremote:
-                return nil
+            switch filelisttask {
+            case .rsyncfilelistings:
+                rsyncparametersrestore.remoteargumentsfilelist(forDisplay: false, verify: false, dryrun: false, recursive: recursive)
+            case .snapshotcatalogsonly:
+                rsyncparametersrestore.remoteargumentssnapshotfilelist(forDisplay: false, verify: false, dryrun: false, recursive: false)
             default:
-                break
+                return nil
             }
             return rsyncparametersrestore.computedarguments
         }
         return nil
     }
 
-    init(config: SynchronizeConfiguration?, recursive: Bool) {
+    init(config: SynchronizeConfiguration?, recursive: Bool, filelisttask: Enumrestorefiles) {
         self.config = config
         self.recursive = recursive
+        self.filelisttask = filelisttask
     }
 }
 
