@@ -259,16 +259,14 @@ extension RestoreTableView {
                                                       config: tempconfig,
                                                       remoteFile: nil,
                                                       localCatalog: nil,
-                                                      drynrun: nil,
-                                                      snapshot: snapshot).getArguments()
+                                                      drynrun: nil).getArguments()
                 }
             } else {
                 arguments = RestorefilesArguments(task: .rsyncfilelistings,
                                                   config: config,
                                                   remoteFile: nil,
                                                   localCatalog: nil,
-                                                  drynrun: nil,
-                                                  snapshot: snapshot).getArguments()
+                                                  drynrun: nil).getArguments()
             }
             guard arguments?.isEmpty == false else { return }
             let command = RsyncProcessNOFilehandler(arguments: arguments,

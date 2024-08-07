@@ -18,8 +18,7 @@ class Snapshotcatalogs {
                                               config: config,
                                               remoteFile: nil,
                                               localCatalog: nil,
-                                              drynrun: nil,
-                                              snapshot: true)
+                                              drynrun: nil)
         let command = RsyncProcessNOFilehandler(arguments: arguments.getArguments(),
                                                 processtermination: processtermination)
         command.executeProcess()

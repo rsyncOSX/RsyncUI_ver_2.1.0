@@ -14,6 +14,7 @@ enum Enumrestorefiles {
     case snapshotcatalogsonly
 }
 
+@MainActor
 final class RestorefilesArguments {
     private var arguments: [String]?
 
@@ -22,12 +23,10 @@ final class RestorefilesArguments {
     }
 
     init(task: Enumrestorefiles, config: SynchronizeConfiguration?,
-         remoteFile: String?, localCatalog: String?, drynrun: Bool?,
-         snapshot _: Bool)
+         remoteFile: String?, localCatalog: String?, drynrun: Bool?)
     {
         if let config {
             arguments = [String]()
-            let snapshot: Bool = (config.snapshotnum != nil) ? true : false
             switch task {
             case .rsync:
                 let arguments = RsyncParametersSingleFilesArguments(config: config,
@@ -36,15 +35,13 @@ final class RestorefilesArguments {
                                                                     drynrun: drynrun)
                 self.arguments = arguments.getArguments()
             case .rsyncfilelistings:
-                let arguments = GetRemoteFileListingsArguments(config: config,
-                                                               recursive: true,
-                                                               snapshot: snapshot)
-                self.arguments = arguments.getArguments()
+                let arguments = RemoteFileListArguments(config: config,
+                                                        recursive: true)
+                self.arguments = arguments.remotefilelistarguments()
             case .snapshotcatalogsonly:
-                let arguments = GetRemoteFileListingsArguments(config: config,
-                                                               recursive: false,
-                                                               snapshot: snapshot)
-                self.arguments = arguments.getArguments()
+                let arguments = RemoteFileListArguments(config: config,
+                                                        recursive: false)
+                self.arguments = arguments.remotefilelistarguments()
             }
         }
     }
