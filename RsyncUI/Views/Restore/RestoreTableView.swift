@@ -112,6 +112,24 @@ struct RestoreTableView: View {
                 }
             }
             .toolbar(content: {
+                
+                ToolbarItem {
+                    if restore.selectedconfig?.task != SharedReference.shared.syncremote, restore.selectedconfig?.offsiteServer.isEmpty == false {
+                        Button {
+                            getlistoffilesforrestore()
+                        } label: {
+                            Image(systemName: "square.and.arrow.down.fill")
+                        }
+                        .help("Get list of files for restore")
+                    }
+                }
+                
+                ToolbarItem {
+                    if restore.selectedconfig?.task == SharedReference.shared.snapshot {
+                        snapshotcatalogpicker
+                    }
+                }
+                
                 ToolbarItem {
                     Button {
                         executerestore()
@@ -120,21 +138,6 @@ struct RestoreTableView: View {
                             .foregroundColor(Color(.blue))
                     }
                     .help("Restore files")
-                }
-
-                ToolbarItem {
-                    if restore.selectedconfig?.task == SharedReference.shared.snapshot {
-                        snapshotcatalogpicker
-                    }
-                }
-
-                ToolbarItem {
-                    Button {
-                        getlistoffilesforrestore()
-                    } label: {
-                        Image(systemName: "square.and.arrow.down.fill")
-                    }
-                    .help("Get list of files for restore")
                 }
 
                 ToolbarItem {
@@ -226,6 +229,7 @@ extension RestoreTableView {
     func getlistoffilesforrestore() {
         if let config = restore.selectedconfig {
             guard config.task != SharedReference.shared.syncremote else { return }
+            guard config.offsiteServer.isEmpty == false else { return }
             gettingfilelist = true
             getfilelist()
         }
