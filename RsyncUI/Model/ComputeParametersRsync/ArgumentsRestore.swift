@@ -15,7 +15,7 @@ final class ArgumentsRestore {
     var config: SynchronizeConfiguration?
     var restoresnapshotbyfiles: Bool = false
 
-    func argumentsrestore(dryRun _: Bool, forDisplay: Bool, tmprestore: Bool) -> [String]? {
+    func argumentsrestore(dryRun: Bool, forDisplay: Bool) -> [String]? {
         if let config {
             let rsyncparametersrestore = RsyncParametersRestore(task: config.task,
                                                                 parameter1: config.parameter1,
@@ -41,9 +41,9 @@ final class ArgumentsRestore {
                                                                 offsiteUsername: config.offsiteUsername,
                                                                 sharedpathforrestore: SharedReference.shared.pathforrestore ?? "",
                                                                 snapshotnum: config.snapshotnum ?? -1,
-                                                                rsyncdaemon: config.rsyncdaemon ?? -1)
-            // rsyncparametersrestore.argumentsrestore(forDisplay: forDisplay, verify: false, dryrun: dryRun, restoresnapshotbyfiles: restoresnapshotbyfiles, tmprestore: tmprestore)
-            rsyncparametersrestore.argumentsrestore(forDisplay: forDisplay, verify: false, dryrun: true, restoresnapshotbyfiles: restoresnapshotbyfiles, tmprestore: tmprestore)
+                                                                rsyncdaemon: config.rsyncdaemon ?? -1,
+                                                                rsyncversion3: SharedReference.shared.rsyncversion3)
+            rsyncparametersrestore.argumentsrestore(forDisplay: forDisplay, verify: false, dryrun: dryRun, restoresnapshotbyfiles: restoresnapshotbyfiles)
             return rsyncparametersrestore.computedarguments
         }
 

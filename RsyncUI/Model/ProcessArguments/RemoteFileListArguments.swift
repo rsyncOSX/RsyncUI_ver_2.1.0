@@ -40,7 +40,8 @@ final class RemoteFileListArguments {
                                                                 offsiteUsername: config.offsiteUsername,
                                                                 sharedpathforrestore: SharedReference.shared.pathforrestore ?? "",
                                                                 snapshotnum: config.snapshotnum ?? -1,
-                                                                rsyncdaemon: config.rsyncdaemon ?? -1)
+                                                                rsyncdaemon: config.rsyncdaemon ?? -1,
+                                                                rsyncversion3: SharedReference.shared.rsyncversion3)
             switch filelisttask {
             case .rsyncfilelistings:
                 if config.task == SharedReference.shared.synchronize {

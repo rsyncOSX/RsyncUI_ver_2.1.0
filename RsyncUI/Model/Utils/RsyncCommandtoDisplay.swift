@@ -32,7 +32,7 @@ struct RsyncCommandtoDisplay {
                 str = (GetfullpathforRsync().rsyncpath ?? "") + " " + arguments.joined()
             }
         case .restore:
-            if let arguments = ArgumentsRestore(config: config, restoresnapshotbyfiles: false).argumentsrestore(dryRun: true, forDisplay: true, tmprestore: false) {
+            if let arguments = ArgumentsRestore(config: config, restoresnapshotbyfiles: false).argumentsrestore(dryRun: true, forDisplay: true) {
                 str = (GetfullpathforRsync().rsyncpath ?? "") + " " + arguments.joined()
             }
         case .verify:

@@ -40,7 +40,8 @@ final class ArgumentsSynchronize {
                                                                         offsiteUsername: config.offsiteUsername,
                                                                         sharedpathforrestore: SharedReference.shared.pathforrestore ?? "",
                                                                         snapshotnum: config.snapshotnum ?? -1,
-                                                                        rsyncdaemon: config.rsyncdaemon ?? -1)
+                                                                        rsyncdaemon: config.rsyncdaemon ?? -1,
+                                                                        rsyncversion3: SharedReference.shared.rsyncversion3)
             switch config.task {
             case SharedReference.shared.synchronize:
                 rsyncparameterssynchronize.argumentsforsynchronize(forDisplay: forDisplay, verify: false, dryrun: dryRun)
