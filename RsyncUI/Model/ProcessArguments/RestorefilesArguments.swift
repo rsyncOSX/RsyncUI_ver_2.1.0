@@ -34,10 +34,7 @@ final class RestorefilesArguments {
                                                                     localCatalog: localCatalog,
                                                                     drynrun: drynrun)
                 self.arguments = arguments.getArguments()
-            case .rsyncfilelistings:
-                let arguments = RemoteFileListArguments(config: config, filelisttask: task)
-                self.arguments = arguments.remotefilelistarguments()
-            case .snapshotcatalogsonly:
+            case .rsyncfilelistings, .snapshotcatalogsonly:
                 let arguments = RemoteFileListArguments(config: config, filelisttask: task)
                 self.arguments = arguments.remotefilelistarguments()
             }
