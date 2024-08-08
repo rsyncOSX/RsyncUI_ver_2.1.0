@@ -242,30 +242,6 @@ class ComputeRsyncParameters {
         }
     }
 
-    func remoteargssnapshot(config: SynchronizeConfiguration) {
-        let snapshotnum = config.snapshotnum ?? 1
-        offsiteCatalog = config.offsiteCatalog + String(snapshotnum - 1) + "/"
-        offsiteUsername = config.offsiteUsername
-        offsiteServer = config.offsiteServer
-        if (offsiteServer ?? "").isEmpty == false {
-            if let offsiteUsername,
-               let offsiteServer,
-               // NB: offsiteCatalog
-               let offsiteCatalog
-            {
-                if config.rsyncdaemon != nil {
-                    if config.rsyncdaemon == 1 {
-                        remoteargs = offsiteUsername + "@" + offsiteServer + "::" + offsiteCatalog
-                    } else {
-                        remoteargs = offsiteUsername + "@" + offsiteServer + ":" + offsiteCatalog
-                    }
-                } else {
-                    remoteargs = offsiteUsername + "@" + offsiteServer + ":" + offsiteCatalog
-                }
-            }
-        }
-    }
-
     // Additional parameters if snapshot
     func linkdestparameter(config: SynchronizeConfiguration, verify: Bool) {
         let snapshotnum = config.snapshotnum ?? 1
@@ -314,23 +290,6 @@ class ComputeRsyncParameters {
             if forDisplay { arguments?.append(" ") }
             arguments?.append(remoteargs ?? "")
             if forDisplay { arguments?.append(" ") }
-        }
-    }
-
-    func argumentsforrestore(forDisplay: Bool, tmprestore: Bool) {
-        if (offsiteServer ?? "").isEmpty {
-            arguments?.append(offsiteCatalog ?? "")
-            if forDisplay { arguments?.append(" ") }
-        } else {
-            if forDisplay { arguments?.append(" ") }
-            arguments?.append(remoteargs ?? "")
-            if forDisplay { arguments?.append(" ") }
-        }
-        if tmprestore {
-            let restorepath = SharedReference.shared.pathforrestore ?? ""
-            arguments?.append(restorepath)
-        } else {
-            arguments?.append(localCatalog ?? "")
         }
     }
 
