@@ -9,6 +9,7 @@
 
 import Foundation
 import RsyncArguments
+import OSLog
 
 @MainActor
 final class ArgumentsRestore {
@@ -17,6 +18,7 @@ final class ArgumentsRestore {
 
     func argumentsrestore(dryRun: Bool, forDisplay: Bool) -> [String]? {
         if let config {
+            Logger.process.info("ArgumentsRestore: using RsyncParametersRestore() from RsyncArguments")
             let rsyncparametersrestore = RsyncParametersRestore(task: config.task,
                                                                 parameter1: config.parameter1,
                                                                 parameter2: config.parameter2,

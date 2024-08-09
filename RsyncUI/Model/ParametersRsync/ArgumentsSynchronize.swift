@@ -9,6 +9,7 @@
 
 import Foundation
 import RsyncArguments
+import OSLog
 
 @MainActor
 final class ArgumentsSynchronize {
@@ -16,6 +17,7 @@ final class ArgumentsSynchronize {
 
     func argumentssynchronize(dryRun: Bool, forDisplay: Bool) -> [String]? {
         if let config {
+            Logger.process.info("ArgumentsSynchronize: using RsyncParametersSynchronize() from RsyncArguments")
             let rsyncparameterssynchronize = RsyncParametersSynchronize(task: config.task,
                                                                         parameter1: config.parameter1,
                                                                         parameter2: config.parameter2,
