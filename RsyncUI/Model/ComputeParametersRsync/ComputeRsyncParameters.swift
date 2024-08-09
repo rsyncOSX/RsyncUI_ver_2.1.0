@@ -14,7 +14,6 @@ class ComputeRsyncParameters {
     var arguments: [String]?
     var localCatalog: String?
     var offsiteCatalog: String?
-    var offsiteUsername: String?
     var offsiteServer: String?
     var remoteargs: String?
     var linkdestparam: String?
@@ -216,47 +215,6 @@ class ComputeRsyncParameters {
             if forDisplay {
                 arguments?.append(" ")
             }
-        }
-    }
-
-    func remoteargs(config: SynchronizeConfiguration) {
-        offsiteCatalog = config.offsiteCatalog
-        offsiteUsername = config.offsiteUsername
-        offsiteServer = config.offsiteServer
-        if (offsiteServer ?? "").isEmpty == false {
-            if let offsiteUsername,
-               let offsiteServer,
-               // NB: offsiteCatalog
-               let offsiteCatalog
-            {
-                if config.rsyncdaemon != nil {
-                    if config.rsyncdaemon == 1 {
-                        remoteargs = offsiteUsername + "@" + offsiteServer + "::" + offsiteCatalog
-                    } else {
-                        remoteargs = offsiteUsername + "@" + offsiteServer + ":" + offsiteCatalog
-                    }
-                } else {
-                    remoteargs = offsiteUsername + "@" + offsiteServer + ":" + offsiteCatalog
-                }
-            }
-        }
-    }
-
-    // Additional parameters if snapshot
-    func linkdestparameter(config: SynchronizeConfiguration, verify: Bool) {
-        let snapshotnum = config.snapshotnum ?? 1
-        linkdestparam = "--link-dest=" + config.offsiteCatalog + String(snapshotnum - 1)
-        if remoteargs != nil {
-            if verify {
-                remoteargs! += String(snapshotnum - 1)
-            } else {
-                remoteargs! += String(snapshotnum)
-            }
-        }
-        if verify {
-            offsiteCatalog! += String(snapshotnum - 1)
-        } else {
-            offsiteCatalog! += String(snapshotnum)
         }
     }
 
