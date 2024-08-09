@@ -69,6 +69,10 @@ struct RestoreTableView: View {
                     if restore.selectedconfig?.offsiteServer.isEmpty == true {
                         notifymacOSFinder
                     }
+                    
+                    if SharedReference.shared.rsyncversion3 == false {
+                        notifyNOrsyncver3
+                    }
                 }
 
                 Spacer()
@@ -181,6 +185,17 @@ struct RestoreTableView: View {
         .background(RoundedRectangle(cornerRadius: 25).stroke(Color.gray, lineWidth: 2))
     }
 
+    var notifyNOrsyncver3: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 15).fill(Color.gray.opacity(0.1))
+            Text("Only rsync version 3.x supports snapshots.")
+                .font(.title3)
+                .foregroundColor(Color.blue)
+        }
+        .frame(width: 450, height: 20, alignment: .center)
+        .background(RoundedRectangle(cornerRadius: 25).stroke(Color.gray, lineWidth: 2))
+    }
+    
     var labelaborttask: some View {
         Label("", systemImage: "play.fill")
             .onAppear(perform: {
