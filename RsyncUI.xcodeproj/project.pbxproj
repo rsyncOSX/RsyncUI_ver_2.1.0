@@ -610,8 +610,7 @@
 				E985C6DC25F3AD9600CB895C /* Ssh */,
 				E985C6DE25F3AD9600CB895C /* Execution */,
 				E985C6F325F3AD9700CB895C /* Logfile */,
-				E985C71725F3AD9700CB895C /* AddParametersRsync */,
-				E985C6F525F3AD9700CB895C /* ComputeParametersRsync */,
+				E985C71725F3AD9700CB895C /* ParametersRsync */,
 				E985C6FB25F3AD9700CB895C /* ProcessArguments */,
 				E985C70325F3AD9700CB895C /* Loggdata */,
 				E985C70725F3AD9700CB895C /* Data */,
@@ -771,25 +770,12 @@
 			path = Logfile;
 			sourceTree = "<group>";
 		};
-		E985C6F525F3AD9700CB895C /* ComputeParametersRsync */ = {
-			isa = PBXGroup;
-			children = (
-				E985C6F625F3AD9700CB895C /* ArgumentsVerify.swift */,
-				E985C6F925F3AD9700CB895C /* ArgumentsSynchronize.swift */,
-				E985C6FA25F3AD9700CB895C /* ArgumentsRestore.swift */,
-			);
-			path = ComputeParametersRsync;
-			sourceTree = "<group>";
-		};
 		E985C6FB25F3AD9700CB895C /* ProcessArguments */ = {
 			isa = PBXGroup;
 			children = (
 				E985C6FD25F3AD9700CB895C /* SnapshotDeleteCatalogsArguments.swift */,
-				E985C6FE25F3AD9700CB895C /* RsyncParametersSingleFilesArguments.swift */,
-				E985C70025F3AD9700CB895C /* RestorefilesArguments.swift */,
 				E985C70125F3AD9700CB895C /* ArgumentsSsh.swift */,
 				E985C70225F3AD9700CB895C /* SnapshotCreateCatalogArguments.swift */,
-				E90B19032C63B40700B3FC35 /* RemoteFileListArguments.swift */,
 			);
 			path = ProcessArguments;
 			sourceTree = "<group>";
@@ -822,12 +808,18 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
-		E985C71725F3AD9700CB895C /* AddParametersRsync */ = {
+		E985C71725F3AD9700CB895C /* ParametersRsync */ = {
 			isa = PBXGroup;
 			children = (
+				E985C6F625F3AD9700CB895C /* ArgumentsVerify.swift */,
+				E985C6F925F3AD9700CB895C /* ArgumentsSynchronize.swift */,
+				E985C6FA25F3AD9700CB895C /* ArgumentsRestore.swift */,
 				E985C71825F3AD9700CB895C /* RsyncArguments.swift */,
+				E90B19032C63B40700B3FC35 /* RemoteFileListArguments.swift */,
+				E985C6FE25F3AD9700CB895C /* RsyncParametersSingleFilesArguments.swift */,
+				E985C70025F3AD9700CB895C /* RestorefilesArguments.swift */,
 			);
-			path = AddParametersRsync;
+			path = ParametersRsync;
 			sourceTree = "<group>";
 		};
 		E985C71A25F3AD9700CB895C /* Global */ = {
