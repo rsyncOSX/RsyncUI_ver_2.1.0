@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import OSLog
 
 final class SnapshotCreateCatalogArguments {
     private var config: SynchronizeConfiguration?
@@ -37,6 +38,7 @@ final class SnapshotCreateCatalogArguments {
     }
 
     init(config: SynchronizeConfiguration?) {
+        Logger.process.warning("SnapshotCreateCatalogArguments: CONVERT")
         guard config != nil else { return }
         args = [String]()
         self.config = config

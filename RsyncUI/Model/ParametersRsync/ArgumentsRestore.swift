@@ -8,8 +8,8 @@
 // swiftlint:disable line_length
 
 import Foundation
-import RsyncArguments
 import OSLog
+import RsyncArguments
 
 @MainActor
 final class ArgumentsRestore {

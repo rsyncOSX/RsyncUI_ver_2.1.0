@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import OSLog
 
 final class ArgumentsSsh {
     private var myremote: UniqueserversandLogins?
@@ -71,6 +72,7 @@ final class ArgumentsSsh {
     }
 
     init(remote: UniqueserversandLogins?, sshkeypathandidentityfile: String?) {
+        Logger.process.warning("ArgumentsSsh: CONVERT")
         myremote = remote
         globalsshkeypathandidentityfile = sshkeypathandidentityfile ?? ""
     }

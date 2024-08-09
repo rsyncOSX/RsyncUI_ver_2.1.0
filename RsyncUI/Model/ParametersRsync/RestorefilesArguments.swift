@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import OSLog
 
 enum Enumrestorefiles {
     case rsync
@@ -29,6 +30,7 @@ final class RestorefilesArguments {
             arguments = [String]()
             switch task {
             case .rsync:
+                Logger.process.warning("RestorefilesArguments: CONVERT - using RsyncParametersSingleFilesArguments()")
                 let arguments = RsyncParametersSingleFilesArguments(config: config,
                                                                     remoteFile: remoteFile,
                                                                     localCatalog: localCatalog,

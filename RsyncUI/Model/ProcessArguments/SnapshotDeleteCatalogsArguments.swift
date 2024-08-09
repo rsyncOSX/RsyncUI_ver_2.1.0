@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import OSLog
 
 final class SnapshotDeleteCatalogsArguments {
     private var config: SynchronizeConfiguration?
@@ -45,6 +46,7 @@ final class SnapshotDeleteCatalogsArguments {
     }
 
     init(config: SynchronizeConfiguration, remotecatalog: String) {
+        Logger.process.warning("SnapshotDeleteCatalogsArguments: CONVERT")
         args = [String]()
         self.config = config
         self.remotecatalog = remotecatalog

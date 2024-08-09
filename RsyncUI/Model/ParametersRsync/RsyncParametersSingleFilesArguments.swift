@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import OSLog
 
 final class RsyncParametersSingleFilesArguments {
     let archive: String = "--archive"
@@ -64,6 +65,7 @@ final class RsyncParametersSingleFilesArguments {
 
     init(config: SynchronizeConfiguration?, remoteFile: String?, localCatalog: String?, drynrun: Bool?) {
         if let config {
+            Logger.process.warning("RsyncParametersSingleFilesArguments: CONVERT")
             self.config = config
             args = [String]()
             arguments(remoteFile: remoteFile, localCatalog: localCatalog, drynrun: drynrun)
